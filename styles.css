@@ -1,0 +1,20 @@
+body
+{
+	background-color: white;
+}
+h1
+{
+	color: red;
+	font-family: baskerville;
+	font-size: 300%;
+}
+p
+{
+	color: yellow;
+	font-family: baskerville;
+	font-size: 160%;
+}
+.center
+{
+	text-align: center;
+}
