@@ -17,6 +17,14 @@ h1
 	border-bottom: 2px solid black;
 	padding: 5;
 }
+
+h2
+{
+	font-size:40px;
+	text-align:center;
+	margin:1rem;
+}
+
 p
 {
 	color: black;
@@ -66,4 +74,73 @@ p
 {
 	background-color: #00471B;
 	color: white;
+}
+
+/*Contact Page*/
+#contact-p
+{
+	text-align: center;
+}
+
+
+/*Contact Form*/
+.contact-form
+{
+	max-width:700px;
+	margin:2rem auto;
+	border:2px solid #333;
+	padding:2rem;
+	border-radius:5px;
+	background-color: rgb(3, 110, 17, .6);
+	
+
+}
+
+#support-topic
+{
+	display:block;
+	margin:.5rem 0;
+	padding:.5rem;
+	border: 2px solid #333;
+	border-radius: 5px;
+}
+
+
+.contact-label
+{
+	display:block;
+	margin:.5rem 0;
+	background-color: transparent;
+	color:black;
+}
+
+.contact-input
+{
+	display:block;
+	width:400px;
+	margin:.5rem 0;
+	padding:.5rem;
+	border:2px solid #333;
+	border-radius:5px;
+}
+
+.contact-textarea
+{
+	display:block;
+	width:500px;
+	padding:2rem;
+	border:2px solid #333;
+	border-radius:5px;	
+}
+
+#submitBtn
+{
+	border:0;
+	background: #00471B;
+	color: white;
+	padding:.75rem;
+	margin: 1rem 0;
+	width:auto;
+	cursor:pointer;
+	border-radius:5px;
 }
