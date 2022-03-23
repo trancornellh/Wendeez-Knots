@@ -4,6 +4,45 @@
 		<link rel="stylesheet" href="styles.css">
 		<title> Wendeez Knots </title>
 		<link rel="icon" type="image/x-icon" href="Images/favicon.png">
+		<style>
+			.disclaimer{
+			font-size:10px;
+			background-color:transparent;
+			}
+			
+			.regular{
+			font-size:30px;
+			background-color:transparent;
+			}
+			
+			.subtitle{
+			font-size:40px;
+			background-color:transparent;
+			text-align:center;
+			}
+			
+			.homebutton{
+				display:block;
+				width:250px;
+				margin:.5rem 0;
+				padding:.5rem;
+				border:2px solid #333;
+				border-radius:5px;
+				background-color:#00471B;
+				color: white;
+			}
+			
+			.dealsBtn{
+				border:0;
+				background: #00471B;
+				color: white;
+				padding:.75rem;
+				margin: 1rem 0;
+				width:auto;
+				cursor:pointer;
+				border-radius:5px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="center">
@@ -19,13 +58,26 @@
 		</div>
 		<!-- Deals-->
 		<div style="background: #EEE1C6; 
-            font-size: 20px; 
             padding: 10px; 
-            border: 1px solid lightgray; 
+            border: 2px solid lightgray; 
             margin: 10px;
 			height:350px;">
 			<img class=left src="Images/food_deals.jpg" width=540 height=320 id="deals">
-			<p style="background-color:transparent";>WK Deals</p>
+			<h2 class="subtitle"; text-align="right">WK Deals</h2>
+			<p class="regular";> Why waste money on small portions? Check out our exclusive deals including some of Wendeez Knots favorites</p>
+			<p class="regular">&nbsp;</p>
+			<p class="disclaimer"> *Only available at participating locations and online orders</p>
+			<input class="homebutton" type="submit" value="Get Deals" id="dealsBtn">
+		</div>
+		<p class="regular">&nbsp;</p>
+		<!-- Giannis favorites-->
+		<div style="background: #EEE1C6; 
+            padding: 10px; 
+            border: 2px solid lightgray; 
+            margin: 10px;
+			height:350px;">
+			<img class=left src="" width=540 height=320 id="deals">
+			<h2 class="subtitle"; text-align="right">Giannis' Order</h2>
 		</div>
 	</body>
 </html>
