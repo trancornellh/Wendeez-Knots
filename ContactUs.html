@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
+        <title> Contact Us </title>
+        <style>
+            .row
+            {
+                display:flex;
+            }
+            .column1
+            {
+                flex: 35%;
+                padding: 10px;
+                margin: 1rem;
+            }
+            .column2
+            {
+                flex: 65%;
+                padding: 10px;
+                margin: 1rem;
+            }
+        </style>
     </head>
     <body>
-        <!--<nav class="topnav">
-            <div class="topnav_container">
-                <a href="/" id="topnav_logo">Wendeez Knots</a>
-                <div class="topnav_toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="topnav_menu">
-                    <li class="topnav_item">
-                        <a href="/" class="topnav_links">Home</a>
-                    </li>
-                    <li class="topnav_item">
-                        <a href="/" class="topnav_links">About Us</a>
-                    </li>
-                    <li class="topnav_item">
-                        <a href="/" class="topnav_links">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>-->
         <div class="center">
 			<h1> Wendeez Knots </h1>
 		</div>
@@ -37,43 +35,66 @@
 			<a href="AboutUs.html">About Us</a>
 			<a class="active" href="ContactUs.html">Contact Us</a>
 		</div>
+        
+        
+        <h2 style="margin-top:30px;margin-left:50px">Contact Us</h2>
+        <div class="row">
+            <div class="column1">
+                <p id="contact-p" style="margin-top:50px">
+                    Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
+                </p>
 
-        <h2>Contact Us</h2>
+                    <hr class="small-line">
 
-        <p id="contact-p">
-            Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
-        </p>
+                    <div class="center">
+                        <a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
+                    </div>
 
-        <form class="contact-form">
+                    <div class="social-media-links" class="center">
+                        
+                            <img class="social-media" src="Images/facebook_logo.png" alt="Facebook">
+                            <img class="social-media" src="Images/instagram_logo.png" alt="Instagram">
+                            <img class="social-media" src="Images/twitter_logo.png" alt="Twitter">
+                            <a target="_blank" href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                                <img class="social-media" src="Images/youtube_logo.png" alt="YouTube">
+                            </a>
+                    </div>
+            </div>
+        
+            <div class="column2">
 
-            <label class="contact-label" for="support-topic">Support Topic</label>
-            <select id="support-topic" value="Choose Option">
-               <option value="issue">Issue Regarding Order</option>
-               <option value="feedback">Restaurant Feedback/Complaints</option>
-               <option value="inquiry">General Inquiry</option>
-               <option value="other">Other Issue</option>
-            </select>
-            
-            <label class="contact-label" for="first-name">First Name</label>
-            <input class="contact-input" type="text" id="first-name">
+                <form class="contact-form">
 
-            <label class="contact-label" for="last-name">Last Name</label>
-            <input class="contact-input" type="text" id="last-name">
+                    <label class="contact-label" for="support-topic">Support Topic</label>
+                    <select id="support-topic" value="Choose Option">
+                    <option value="issue">Issue Regarding Order</option>
+                    <option value="feedback">Restaurant Feedback/Complaints</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="other">Other Issue</option>
+                    </select>
+                    
+                    <label class="contact-label" for="first-name">First Name</label>
+                    <input class="contact-input" type="text" id="first-name">
 
-            <label class="contact-label" for="email">Email</label>
-            <input class="contact-input" type="text" id="email">
+                    <label class="contact-label" for="last-name">Last Name</label>
+                    <input class="contact-input" type="text" id="last-name">
 
-            <label class="contact-label" for="message">Message</label>
-            <textarea class="contact-textarea" id="message"></textarea>
+                    <label class="contact-label" for="email">Email</label>
+                    <input class="contact-input" type="text" id="email">
 
-            <input class="contact-input" type="submit" value="Submit" id="submitBtn">
+                    <label class="contact-label" for="message">Message</label>
+                    <textarea class="contact-textarea" id="message"></textarea>
+
+                    <input class="contact-input" type="submit" value="Submit" id="submitBtn">
 
 
-        </form>
+                </form>
+            </div>
+        </div>
 
-        <h2>Frequently Asked Questions</h2>
+        <h2 class="faq">Frequently Asked Questions</h2>
 
-        <a href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
+        
         
     </body>
 </html>
