@@ -20,7 +20,14 @@
 			background-color:transparent;
 			text-align:center;
 			}
-			
+			.homeblocks{
+				background: #EEE1C6; 
+				padding: 10px; 
+				border: 2px solid #00471B; 
+				margin: 10px;
+				height:350px;
+				width:1200px
+			}
 			.homebutton{
 				display:block;
 				width:250px;
@@ -31,6 +38,7 @@
 				background-color:#00471B;
 				color: white;
 			}
+			
 		
 		</style>
 	</head>
@@ -46,38 +54,47 @@
 			<a href="AboutUs.html">About Us</a>
 			<a href="ContactUs.html">Contact Us</a>
 		</div>
+		
 		<p class="regular">&nbsp;</p>
+		
 		<!-- Deals-->
-		<div style="background: #EEE1C6; 
-            padding: 10px; 
-            border: 2px solid #00471B; 
-            margin: 10px;
-			height:350px;
-			width:1200px">
+		<div class="homeblocks">
 			<img class=left src="Images/food_deals.jpg" width=540 height=320 id="deals">
 			<h2 class="subtitle"; text-align="right">WK Deals</h2>
 			<p class="regular";> Why waste money on small portions? Check out our exclusive deals including some of Wendeez Knots favorites</p>
 			<p class="regular">&nbsp;</p>
 			<p class="disclaimer"> *Only available at participating locations and online orders</p>
-			<input class="homebutton" type="submit" value="Get Deals" id="dealsBtn">
+			<input class="homebutton" type="submit" value="Get Deals" id="dealsBtn"> <!--will add functionallity to this button-->
 		</div>
+		
 		<p class="regular">&nbsp;</p>
+		
 		<!-- Giannis favorites-->
-		<div style="background: #EEE1C6;
-			display:block;
-            padding: 10px; 
-            border: 2px solid #00471B; 
-            margin: 10px;
-			height:350px;
-			width:1200px
-			">
+		<div class="homeblocks">
 			<img class=right src="Images/giannis-eating.jpg" width=300 height=320 id="giannis_order">
 			<h2 class="subtitle"; text-align="right">Giannis' Order</h2>
 			<p class="regular";> Ever wondered what if feels like being an NBA Champ? Try ordering the Giannis Antetokounmpo's special order </p>
 			<p class="regular">&nbsp;</p>
 			<p class="regular">You Wont regret it! </p>
 			<p class="regular">&nbsp;</p>
-			<input class="homebutton" type="submit" value="Order Now" id="giannisBtn">
+			<input class="homebutton" type="submit" value="Order Now" id="giannisBtn"><!--will add functionallity to this button-->
+		</div>
+
+		<!--footer-->
+		<div class="footer">
+			<p class="regular">&nbsp;</p>
+			<hr>
+			<h2 class="footer-left"> Contact Us:</h2>
+			<h2 class="footer-center">Social Media:</h2>
+			<h2 class="footer-right"> Other:</h2>     
+			<p class="footer-left"> Email Us at support@wendeezknots.com</p>
+			<p class="footer-center"> Follow us at &nbsp;
+				<img class="footer-center" src="Images/facebook_logo.png" alt="Facebook" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/instagram_logo.png" alt="Instagram" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/twitter_logo.png" alt="Twitter" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/youtube_logo.png" alt="YouTube" style="width:30px; height:30px;">
+			</p>
+			<a class="footer-right" href="" >FAQ</a>
 		</div>
 	</body>
 </html>
