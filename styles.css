@@ -30,7 +30,7 @@ p
 	color: black;
 	font-size: 140%;
 	padding: 10;
-	margin: 1rem
+	margin: 1rem;
 }
 .center
 {
@@ -44,7 +44,7 @@ p
 	float: left;
 }
 
-/* Black background Color to the Top Navigation */
+/* Transparent background for Top Navigation */
 .topnav
 {
 	display: flex;
