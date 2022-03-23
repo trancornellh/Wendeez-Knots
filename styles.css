@@ -15,7 +15,7 @@ h1
 	color: #00471B;
 	font-size: 400%;
 	border-bottom: 2px solid black;
-	padding: 5;
+	padding: 10;
 }
 
 h2
@@ -28,12 +28,20 @@ h2
 p
 {
 	color: black;
-	font-size: 150%;
-	padding: 5;
+	font-size: 140%;
+	padding: 10;
+	margin: 1rem
 }
 .center
 {
 	text-align: center;
+}
+
+.left
+{
+	padding: 10;
+	margin: 1rem;
+	float: left;
 }
 
 /* Black background Color to the Top Navigation */
