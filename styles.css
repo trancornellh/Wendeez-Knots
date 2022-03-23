@@ -21,7 +21,6 @@ h1
 h2
 {
 	font-size:40px;
-	text-align:center;
 	margin:1rem;
 }
 
@@ -94,7 +93,7 @@ p
 /*Contact Form*/
 .contact-form
 {
-	max-width:700px;
+	max-width:400px;
 	margin:2rem auto;
 	border:2px solid #333;
 	padding:2rem;
@@ -104,9 +103,15 @@ p
 
 }
 
+#contact-p
+{
+	background-color: transparent;
+}
+
 #support-topic
 {
 	display:block;
+	width: 250px;
 	margin:.5rem 0;
 	padding:.5rem;
 	border: 2px solid #333;
@@ -125,7 +130,7 @@ p
 .contact-input
 {
 	display:block;
-	width:400px;
+	width:250px;
 	margin:.5rem 0;
 	padding:.5rem;
 	border:2px solid #333;
@@ -135,7 +140,7 @@ p
 .contact-textarea
 {
 	display:block;
-	width:500px;
+	width:300px;
 	padding:2rem;
 	border:2px solid #333;
 	border-radius:5px;	
@@ -151,4 +156,44 @@ p
 	width:auto;
 	cursor:pointer;
 	border-radius:5px;
+}
+
+.faq
+{
+	text-align: center;
+}
+
+.small-line
+{
+	margin:3rem 0;
+}
+
+.center{
+	text-align: center;
+}
+
+#email-link
+{
+	font-size:20px;
+	color:black;
+	text-transform:uppercase;
+	text-decoration:underline;
+}
+
+.social-media-links
+{
+	margin-left:auto;
+	margin-right:auto;
+	width:57%;
+}
+
+.social-media
+{
+	border: 2px solid black;
+	border-radius: 50px;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
 }
