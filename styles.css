@@ -43,6 +43,13 @@ p
 	float: left;
 }
 
+.right
+{
+	padding: 10;
+	margin: 1rem;
+	float: right;
+}
+
 /* Transparent background for Top Navigation */
 .topnav
 {
