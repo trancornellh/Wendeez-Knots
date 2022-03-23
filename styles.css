@@ -204,3 +204,25 @@ p
 	width: 30px;
 	height: 30px;
 }
+
+.container
+{
+	display: flex;
+	padding: 1%;
+	width: 98%;
+	height: auto;
+	&__photo
+	{
+		float: left;
+		display: inline-block;
+		width: 30%;
+		height: auto;
+		vertical-align: top;
+	}
+	&__text
+	{
+		display: inline-block;
+		width: 60%;
+		height: auto;
+	}
+}
