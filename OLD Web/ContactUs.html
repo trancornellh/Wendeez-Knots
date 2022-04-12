@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title> Contact Us </title>
+        <style>
+            .row
+            {
+                display:flex;
+            }
+            .column1
+            {
+                flex: 35%;
+                padding: 10px;
+                margin: 1rem;
+            }
+            .column2
+            {
+                flex: 65%;
+                padding: 10px;
+                margin: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+			<h1> Wendeez Knots </h1>
+		</div>
+		<div class="topnav">
+			<a href="Home.html">Home</a>
+			<a href="Menu.html">Menu</a>
+			<a href="OrderOnline.html">Order Online</a>
+			<a href="AboutUs.html">About Us</a>
+			<a class="active" href="ContactUs.html">Contact Us</a>
+		</div>
+        
+        
+        <h2 style="margin-top:30px;margin-left:50px">Contact Us</h2>
+        <div class="row">
+            <div class="column1">
+                <p id="contact-p" style="margin-top:50px">
+                    Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
+                </p>
+
+                    <hr class="small-line">
+
+                    <div class="center">
+                        <a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
+                    </div>
+
+                    <div class="social-media-links" class="center">
+                        
+                            <img class="social-media" src="Images/facebook_logo.png" alt="Facebook">
+                            <img class="social-media" src="Images/instagram_logo.png" alt="Instagram">
+                            <img class="social-media" src="Images/twitter_logo.png" alt="Twitter">
+                            <a target="_blank" href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                                <img class="social-media" src="Images/youtube_logo.png" alt="YouTube">
+                            </a>
+                    </div>
+            </div>
+        
+            <div class="column2">
+
+                <form class="contact-form">
+
+                    <label class="contact-label" for="support-topic">Support Topic</label>
+                    <select id="support-topic" value="Choose Option">
+                    <option value="issue">Issue Regarding Order</option>
+                    <option value="feedback">Restaurant Feedback/Complaints</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="other">Other Issue</option>
+                    </select>
+                    
+                    <label class="contact-label" for="first-name">First Name</label>
+                    <input class="contact-input" type="text" id="first-name">
+
+                    <label class="contact-label" for="last-name">Last Name</label>
+                    <input class="contact-input" type="text" id="last-name">
+
+                    <label class="contact-label" for="email">Email</label>
+                    <input class="contact-input" type="text" id="email">
+
+                    <label class="contact-label" for="message">Message</label>
+                    <textarea class="contact-textarea" id="message"></textarea>
+
+                    <input class="contact-input" type="submit" value="Submit" id="submitBtn">
+
+
+                </form>
+            </div>
+        </div>
+
+        <h2 class="faq">Frequently Asked Questions</h2>
+
+        
+        <!--footer-->
+		<div class="footer">
+			<p class="regular">&nbsp;</p>
+			<hr>
+			<h2 class="footer-left"> Contact Us:</h2>
+			<h2 class="footer-center">Social Media:</h2>
+			<h2 class="footer-right"> Other:</h2>     
+			<p class="footer-left"> Email Us at support@wendeezknots.com</p>
+			<p class="footer-center"> Follow us at &nbsp;
+				<img class="footer-center" src="Images/facebook_logo.png" alt="Facebook" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/instagram_logo.png" alt="Instagram" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/twitter_logo.png" alt="Twitter" style="width:30px; height:30px;">
+				<img class="footer-center" src="Images/youtube_logo.png" alt="YouTube" style="width:30px; height:30px;">
+			</p>
+			<a class="footer-right" href="" >FAQ</a>
+		</div>
+    </body>
+</html>
