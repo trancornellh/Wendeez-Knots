@@ -12,6 +12,84 @@
     </head>
 
     <body>
+	
+	<style>
+		h1
+		{
+			color: #00471B;
+			font-size: 400%;
+			border-bottom: 2px solid black;
+			padding: 10;
+		}
+		.p-t
+		{
+			color: black;
+			font-size: 140%;
+			padding: 10;
+			margin: 1rem;
+		}
+		.contact-form
+		{
+			max-width:400px;
+			margin:2rem auto;
+			border:2px solid #333;
+			padding:2rem;
+			border-radius:5px;
+			background-color: rgb(3, 110, 17, .6);
+		}		
+		.contact-label
+		{
+			display:block;
+			margin:.5rem 0;
+			background-color: transparent;
+			color:black;
+		}
+
+		.contact-input
+		{
+			display:block;
+			width:250px;
+			margin:.5rem 0;
+			padding:.5rem;
+			border:2px solid #333;
+			border-radius:5px;
+		}
+		.contact-textarea
+		{
+			display:block;
+			width:300px;
+			padding:2rem;
+			border:2px solid #333;
+			border-radius:5px;	
+		}
+		.center
+		{
+			text-align: center;
+		}
+		.small-line
+		{
+			margin:3rem 0;
+		}
+		.social-media
+		{
+			border: 2px solid black;
+			border-radius: 50px;
+			margin-top: 20px;
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 30px;
+			height: 30px;
+		}
+		
+		#email-link
+		{
+			font-size:20px;
+			color:black;
+			text-transform:uppercase;
+			text-decoration:underline;
+		}
+	</style>
+	
     <!--Navigation Bar-->
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00471b;">
             <div class="container-fluid">
@@ -43,7 +121,7 @@
                             <a class="nav-link" href="About Us.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active"  aria-current="page" href="#">Contact Us</a>
+                            <a class="nav-link active"  aria-current="page" href="Contact Us.html">Contact Us</a>
                         </li>
                     </ul>
 
@@ -59,67 +137,64 @@
                 </div>
             </div>
         </nav>
-
+	<p>&nbsp;</p>
     <!--Image Text Grid-->
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-4 g-0" style="border:1px solid #ddd">
-                    <h1>Contact Us</h1>
-                    <p>
-                        Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
-                    </p>
+			<div class="row">
+				<div class="col-xl-4 col-lg-4 col-md-4" >
+					<h1 style="text-align:center;">Contact Us</h1>
+					<p>&nbsp;</p>
+					<p class = "p-t" style="text-align:center;">
+						Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
+					</p>
 
-                    <hr class="small-line">
+					<hr class="small-line">
 
-                    <div class="center">
-                        <a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
-                    </div>
+					<div class="center">
+						<a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
+					</div>
 
-                    <div class="social-media-links" class="center">
-                        
-                        <!-- <img class="social-media" src="Images/facebook_logo.png" alt="Facebook" class="img-fluid">
-                        <img class="social-media" src="Images/instagram_logo.png" alt="Instagram" class="img-fluid">
-                        <img class="social-media" src="Images/twitter_logo.png" alt="Twitter" class="img-fluid">
-                        <a target="_blank" href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                            <img class="social-media" src="Images/youtube_logo.png" alt="YouTube" class="img-fluid">
-                        </a> -->
-                </div>
+					<div class="social-media-links" class="center" style="text-align:center;">
+						
+						<img class="social-media" src="Images/facebook_logo.png" alt="Facebook" >
+						<img class="social-media" src="Images/instagram_logo.png" alt="Instagram" >
+						<img class="social-media" src="Images/twitter_logo.png" alt="Twitter" >
+						<a target="_blank" href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+							<img class="social-media" src="Images/youtube_logo.png" alt="YouTube" >
+						</a> 
+					</div>
+				</div>
 
-                <div class="col-xl-8 col-lg-8 col-md-8" style="border:1px solid #ddd">
+				<div class="col-xl-8 col-lg-8 col-md-8">
 
-                    <form class="contact-form">
+					<form class="contact-form">
 
-                        <label class="contact-label" for="support-topic">Support Topic</label>
-                        <select id="support-topic" value="Choose Option">
-                        <option value="issue">Issue Regarding Order</option>
-                        <option value="feedback">Restaurant Feedback/Complaints</option>
-                        <option value="inquiry">General Inquiry</option>
-                        <option value="other">Other Issue</option>
-                        </select>
-                        
-                        <label class="contact-label" for="first-name">First Name</label>
-                        <input class="contact-input" type="text" id="first-name">
-    
-                        <label class="contact-label" for="last-name">Last Name</label>
-                        <input class="contact-input" type="text" id="last-name">
-    
-                        <label class="contact-label" for="email">Email</label>
-                        <input class="contact-input" type="text" id="email">
-    
-                        <label class="contact-label" for="message">Message</label>
-                        <textarea class="contact-textarea" id="message"></textarea>
-    
-                        <input class="contact-input" type="submit" value="Submit" id="submitBtn">
-    
-    
-                    </form>
+						<label class="contact-label" for="support-topic">Support Topic</label>
+						<select id="support-topic" value="Choose Option">
+						<option value="issue">Issue Regarding Order</option>
+						<option value="feedback">Restaurant Feedback/Complaints</option>
+						<option value="inquiry">General Inquiry</option>
+						<option value="other">Other Issue</option>
+						</select>
+						
+						<label class="contact-label" for="first-name">First Name</label>
+						<input class="contact-input" type="text" id="first-name">
+	
+						<label class="contact-label" for="last-name">Last Name</label>
+						<input class="contact-input" type="text" id="last-name">
+	
+						<label class="contact-label" for="email">Email</label>
+						<input class="contact-input" type="text" id="email">
+	
+						<label class="contact-label" for="message">Message</label>
+						<textarea class="contact-textarea" id="message"></textarea>
+	
+						<input class="contact-input" type="submit" value="Submit" id="submitBtn">
+	
+	
+					</form>
 
-                </div>
-
-
-
-
-
+				
                 </div>
             </div>
         </div>
