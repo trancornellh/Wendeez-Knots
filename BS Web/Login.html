@@ -61,7 +61,7 @@
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Username" aria-label="Username">
                         <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
-                        <button class="btn btn-outline-light me-2" type="submit">Register</button>
+                        <a class="btn btn-outline-light me-2" href="Register.html" role="button">Register</a>
                         <button class="btn btn-outline-light" type="submit">Login</button>
                     </form>
                 </div>
@@ -69,69 +69,44 @@
         </nav>
 
         <!--Login-->
-        <header>
-            <style>
-                #intro {
-                    background-image: url('Images/Homey.png');
-                    height: 100vh;
-                }
+        <section class="vh-100 bg-image shadow-2-strong"
+                 style="background-image: url('Images/Homey.png');">
+            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="card" style="border-radius: 15px;">
+                                <div class="card-body p-5">
+                                    <h2 class="text-uppercase text-center mb-5">Login</h2>
 
-                /* Height for devices larger than 576px */
-                @media (min-width: 992px) {
-                    #intro {
-                        margin-top: -58.59px;
-                    }
-                }
+                                    <form>
 
-                .navbar .nav-link {
-                    color: #fff !important;
-                }
-            </style>
-            <div id="intro" class="bg-image shadow-2-strong">
-                <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-5 col-md-8">
-                                <form class="bg-white  rounded-5 shadow-5-strong p-5">
-                                    <!--Username input-->
-                                    <div class="form-outline mb-4">
-                                        <input type="search" id="form1Example1" class="form-control" placeholder="Username" aria-label="Username" />
-                                    </div>
-
-                                    <!--Password input-->
-                                    <div class="form-outline mb-4">
-                                        <input type="password" id="form1Example2" class="form-control" placeholder="Password" aria-label="Password" />
-                                    </div>
-
-                                    <!--2 column grid layout for inline styling-->
-                                    <div class="row mb-4">
-                                        <div class="col d-flex justify-content-center">
-                                            <!--Checkbox-->
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                                                <label class="form-check-label" for="form1Example3">
-                                                    Remember me
-                                                </label>
-                                            </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Username" aria-label="Username" />
                                         </div>
 
-                                        <div class="col text-center">
-                                            <!--Simple link-->
-                                            <a href="Register.html">Register Here!</a>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
                                         </div>
-                                    </div>
 
-                                    <!-- Submit button -->
-                                    <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-success btn-outline-success btn-block">Sign in</button>
-                                    </div>
-                                </form>
+                                        <div class="d-grid gap-2">
+                                            <button type="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Login</button>
+                                        </div>
+
+                                        <p class="text-center text-muted mt-5 mb-0">
+                                            Need an Account? <a href="Register.html"
+                                                                        class="fw-bold text-body"><u>Register Here</u></a>
+                                        </p>
+
+                                    </form>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
         
         <!--Footer-->
         <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
