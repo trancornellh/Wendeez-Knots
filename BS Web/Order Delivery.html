@@ -61,10 +61,45 @@
             </div>
         </nav>
 
-        <div>
-            <h1 style="text-align:center;"> Order Now </h1>
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-9 g-10" style="text-align: center; font-weight: bold; border-bottom: 1px solid;">Items</div>
+            <div class="col-xl-3 col-lg-3 col-md-3 g-10" style="text-align: center; font-weight: bold; border-bottom: 1px solid; border-left: 1px solid;">Cart</div>
         </div>
-
+        <div class="row">
+            <div class="col-xl-9 col-lg-9 col-md-9 g-10">
+                <div class="container-fluid">
+                    <!--Greek Freak Burger-->
+                    <div class="row">
+                        <div class="col-xl-1 col-lg-1 col-md-1 g-10"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 g-10">Greek Freek Burger</div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 g-10">
+                            <label for="GFB-q">Qty: </label>
+                            <input type="number" id="GFB-q" name="GFB-q" min="1" value="1">
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 g-10">Price</div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 g-10">
+                            <button type="button" onclick = "addCart(document.getElementById('GFB-q').value,10,'Greek Freak Burger')">Add</button>
+                        </div>
+                    </div>
+                        <!--Greek Freak Fries-->
+                    <div class="row">
+                        <div class="col-xl-1 col-lg-1 col-md-1 g-10"></div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 g-10">Greek Freek Fries</div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 g-10">
+                            <label for="GFF-q">Qty: </label>
+                            <input type="number" id="GFF-q" name="GFF-q" min="1" value="1">
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 g-10">Price</div>
+                        <div class="col-xl-1 col-lg-1 col-md-1 g-10">
+                            <button type="button" onclick="addCart(document.getElementById('GFF-q').value,4,'Greek Freak Fries')">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 g-10" style="text-align: center; font-weight: bold; border-left: 1px solid;">
+                <p id="cart1"></p>
+            </div>
+        </div>
         <p>&nbsp;</p>
 
         <!--Footer-->
@@ -113,6 +148,26 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+        <script>
+            const cart = [];
+            function addCart(qty, price, item) {              
+                cart[cart.length] = (qty + "x " + item + "  $" + calcPrice(qty, price) + ".00");
+                printCart();
+            }
+
+            function calcPrice(qty, price) {
+                return qty * price;
+            }
+
+            function printCart() {
+                let varprint = "";
+                for (let i = 0; i < cart.length; i++) {
+                    varprint = varprint + cart[i] + "<br>" ;
+                }
+                document.getElementById('cart1').innerHTML = varprint;
+            }
+        </script>
     </body>
 </html>
