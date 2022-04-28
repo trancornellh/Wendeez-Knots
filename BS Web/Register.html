@@ -81,31 +81,32 @@
                             <div class="card-body p-5">
                                 <h2 class="text-uppercase text-center mb-5">Create an Account</h2>
 
-                                <form>
+                                <form method="post" action="registertest.php">
 
                                     <div class="row mb-4">
                                         <div class="col">
                                             <div class="form-outline">
-                                                <input type="text" id="form3Example1" class="form-control form-control-lg" placeholder="First Name" aria-label="First Name"/>
+                                                <input type="text" name="fname" id="form3Example1" class="form-control form-control-lg" placeholder="First Name" aria-label="First Name"/>
+                                                
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-outline">
-                                                <input type="text" id="form3Example2" class="form-control form-control-lg" placeholder="Last Name" aria-label="Last Name"/>
+                                                <input type="text" name="lname" id="form3Example2" class="form-control form-control-lg" placeholder="Last Name" aria-label="Last Name"/>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Your Email" aria-label="Your Email"/>
+                                        <input type="email" name="email" id="form3Example3cg" class="form-control form-control-lg" placeholder="Your Email" aria-label="Your Email"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" aria-label="Password"/>
+                                        <input type="password" name="passcode" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" aria-label="Password"/>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Repeat Password" aria-label="Repeat Password"/>
+                                        <input type="password" name="rptpasscode" id="form3Example4cdg" class="form-control form-control-lg" placeholder="Repeat Password" aria-label="Repeat Password"/>
                                     </div>
 
                                     <div class="form-check d-flex justify-content-center mb-5">
@@ -116,7 +117,7 @@
                                     </div>
 
                                     <div class="d-grid gap-2">
-                                        <button type="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Register</button>
+                                        <button type="submit" name="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Register</button>
                                     </div>
 
                                     <p class="text-center text-muted mt-5 mb-0">
