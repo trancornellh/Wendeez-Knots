@@ -79,18 +79,18 @@
                                 <div class="card-body p-5">
                                     <h2 class="text-uppercase text-center mb-5">Login</h2>
 
-                                    <form>
+                                    <form  action="login.php" method="post"> 
 
                                         <div class="form-outline mb-4">
-                                            <input type="email" id="loginemail" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />
+                                            <input type="email" name="email" id="loginemail" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="loginpassword" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
+                                            <input type="password" name="passcode" id="loginpassword" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
                                         </div>
 
                                         <div class="d-grid gap-2">
-                                            <button type="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Login</button>
+                                            <button type="submit" name="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Login</button>
                                         </div>
 
                                         <p class="text-center text-muted mt-5 mb-0">

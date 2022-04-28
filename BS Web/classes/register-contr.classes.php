@@ -16,24 +16,24 @@ class RegisterContr extends Register {
         $this->lname = $lname;
     }
 
-    public function RegisterUser(){
+    public function registerUser(){
         if($this->emptyInput() == false){
-            header("location: ../index.php?error=emptyinput");
+            header("location: ../Register.html?error=emptyinput");
             exit();
         }
 
         if($this->invalidEmail() == false){
-            header("location: ../index.php?error=invalidemail");
+            header("location: ../Register.html?error=invalidemail");
             exit();
         }
 
         if($this->passwordMatch() == false){
-            header("location: ../index.php?error=passwordmatch");
+            header("location: ../Register.html?error=passwordmatch");
             exit();
         }
 
         if($this->emailTaken() == false){
-            header("location: ../index.php?error=emailtaken");
+            header("location: ../Register.html?error=emailtaken");
             exit();
         }
 
