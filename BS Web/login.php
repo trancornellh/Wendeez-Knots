@@ -16,8 +16,7 @@ if(isset($_POST["submit"])){
     $login->loginUser();
 
     //going back to front page
-    header("location: ../Home.html");
+    header("location: ../hometest.php");
 }
 
 
-?>

@@ -42,4 +42,3 @@ class Register extends Dbh {
 
 
 
-?>

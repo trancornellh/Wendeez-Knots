@@ -37,4 +37,3 @@ class LoginContr extends Login {
 }
 
 
-?>

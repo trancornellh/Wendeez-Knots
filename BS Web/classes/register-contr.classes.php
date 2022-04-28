@@ -86,4 +86,3 @@ class RegisterContr extends Register {
 }
 
 
-?>
