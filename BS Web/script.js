@@ -83,7 +83,7 @@ function emptyCart()
 function checkout()
 {
     if (cart.length > 0) {
-        
+        window.location.replace("Order Delivery.html")
     }
     else {
         alert("Cart is Empty");
