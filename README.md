@@ -1,7 +1,6 @@
 # Wendeez Knots
 Restaurant Website
 Based Off Giannis Antetokounmpo
-## :gear: Credits
 
 ## :hammer_and_wrench: Technologies and Tools Used
 
@@ -11,6 +10,7 @@ Based Off Giannis Antetokounmpo
 ![](https://img.shields.io/github/last-commit/trancornellh/Wendeez-Knots?logo=github)
 ![](https://img.shields.io/github/repo-size/trancornellh/Wendeez-Knots?color=success&logo=github)
 
+## :gear: Credits
 Created by trancornellh, awonggong, and mhkpham ~
 
 ![](https://img.shields.io/github/followers/trancornellh?label=trancornellh&style=social) 
