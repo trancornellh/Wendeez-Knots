@@ -1,8 +1,9 @@
 // JavaScript source code
+printCart();
 var btn = document.getElementsByClassName('addtocart');
 var ept = document.getElementsByClassName('emptycart');
 var chc = document.getElementsByClassName('proceed');
-var cart = [];
+
 for (var i = 0; i < btn.length; i++) {
     btn[i].addEventListener('click', function () { addToCart(this); });
 }
@@ -19,7 +20,7 @@ function addToCart(elem)
     var getName;
     var getQty;
     var sibs = [];
-
+    var cart = [];
     while (elem = elem.previousSibling)
     {
         if (elem.nodeType === 3) continue; // text node
@@ -44,19 +45,50 @@ function addToCart(elem)
         quantity: getQty
     };
     //document.getElementById("cart").innerHTML = getPrice + " " + getName + " " + getQty;
- 
-    cart.push(product);
-    printCart(cart);
+    var stringProduct = JSON.stringify(product);
+    if (!sessionStorage.getItem('cart')) {
+        cart.push(stringProduct);
+        stringCart = JSON.stringify(cart);
+        sessionStorage.setItem('cart', stringCart);
+        printCart();
+    }
+
+    else {
+        cart = JSON.parse(sessionStorage.getItem('cart'));
+        cart.push(stringProduct);
+        stringCart = JSON.stringify(cart);
+        sessionStorage.setItem('cart', stringCart);
+        printCart();
+    }
+
+
+    //cart.push(product);
+    
 }
 
-function printCart(cart)
+function printCart()
 {
     var total = 0;
     var price = 0;
-    var qty = "";
+    var qty = 0;
     var name = "";
     var carttable = "";
 
+    if (sessionStorage.getItem('cart')) {
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+        for (let i = 0; i < cart.length; i++) {
+            var x = JSON.parse(cart[i]);
+            price = parseFloat(x.price.split('$')[1]);
+            name = x.productname;
+            qty = x.quantity;
+            total += (qty * price);
+            carttable += "<tr><td>" + name + "</td><td>" + qty + "</td><td>$" + (price * qty).toFixed(2) + "</td></tr>";
+        }
+    }
+
+
+
+    /*
     for (let i = 0; i < cart.length; i++) {
         //price = cart[i].price;
         name = cart[i].productname;
@@ -66,8 +98,9 @@ function printCart(cart)
 
         total += (qty * price);
         //carttable += qty + "x " + name + "<tr> $" + (price * qty) + "<br>";
-        carttable += "<tr><td>" + name + "</td><td>" + qty + "</td><td>$" + (price*qty).toFixed(2) + "</td></tr>";
+        carttable += "<tr><td>" + name + "</td><td>" + qty + "</td><td>$" + (price * qty).toFixed(2) + "</td></tr>";
     }
+    */
     document.getElementById("carttable").innerHTML = carttable;
     document.getElementById("total").innerHTML = "$" + total.toFixed(2);
 
@@ -75,15 +108,17 @@ function printCart(cart)
 
 function emptyCart()
 {
-    var empty = [];
-    cart = empty;
-    printCart(cart);
+    if (sessionStorage.getItem('cart')) {
+        sessionStorage.removeItem('cart');
+        printCart();
+    }
 }
 
 function checkout()
 {
-    if (cart.length > 0) {
-        window.location.replace("Order Delivery.html")
+    if (sessionStorage.getItem('cart')) {
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+        window.location.replace("Address.html");
     }
     else {
         alert("Cart is Empty");
