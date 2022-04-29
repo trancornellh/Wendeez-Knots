@@ -33,11 +33,11 @@ function passwordMatch($passcode, $rptpasscode){
     return $result;
 }
 
-function emailTaken($conn, $email){
+function emailExists($conn, $email){
     $sql = "SELECT * FROM users WHERE email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../BS Web/Register.html?error=stmtfailed");
+        header("location: ../Register.html?error=stmtfailed");
         exit();
     }
 
@@ -62,7 +62,7 @@ function createUser($conn, $email, $passcode, $fname, $lname){
     $sql = "INSERT INTO users (email, passcode, fname, lname) VALUES (?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../BS Web/Register.html?error=stmtfailed");
+        header("location: ../Register.html?error=stmtfailed");
         exit();
     }
 
@@ -72,8 +72,43 @@ function createUser($conn, $email, $passcode, $fname, $lname){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../BS Web/Register.html");
+    header("location: ../Register.html");
     exit();
 
 }
 
+function emptyInputLogin($email, $passcode){
+    $result='';
+    if(empty($email) || empty($passcode)){
+        $result=true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser($conn, $email, $passcode){
+    $emailExists = emailExists($conn, $email);  
+    if ($emailExists === false){
+        header("location: ../Login.html?error=usernotfound");
+        exit();
+    }
+
+    $passwordHashed = $emailExists["passcode"];
+    $checkPass = password_verify($passcode, $passwordHashed);
+
+    if($checkPass === false){
+        header("location: ../Login.html?error=usernotfound");
+        exit();
+    }
+
+    else if ($checkPass === true){
+       /* session_start();
+        $_SESSION["userId"] = $emailExists["id"];
+        $_SESSION["userEmail"] = $emailExists["email"];
+        header("location: ../Home.html");
+        exit();*/
+        echo "Logged In";
+    }
+}

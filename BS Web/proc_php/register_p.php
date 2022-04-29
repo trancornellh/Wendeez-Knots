@@ -13,22 +13,22 @@ if(isset($_POST["submit"])){
     require_once 'functions_p.php';
 
     if(emptyInputRegister($email, $passcode, $rptpasscode, $fname, $lname) !== false){
-        header("location: ../BS Web/Register.html?error=emptyinput");
+        header("location: ../Register.html?error=emptyinput");
         exit();
     }
 
     if(invalidEmail($email) !== false){
-        header("location: ../BS Web/Register.html?error=invalidemail");
+        header("location: ../Register.html?error=invalidemail");
         exit();
     }
 
     if(passwordMatch($passcode, $rptpasscode) !== false){
-        header("location: ../BS Web/Register.html?error=passdontmatch");
+        header("location: ../Register.html?error=passdontmatch");
         exit();
     }
 
-    if(emailTaken($conn, $email) !== false){
-        header("location: ../BS Web/Register.html?error=emailtaken");
+    if(emailExists($conn, $email) !== false){
+        header("location: ../Register.html?error=emailtaken");
         exit();
     }
 
@@ -37,7 +37,7 @@ if(isset($_POST["submit"])){
    
 }
 else{
-    header("location: ../BS Web/Register.html");
+    header("location: ../Register.html");
     exit();
 }
 
