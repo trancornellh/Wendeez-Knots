@@ -14,4 +14,5 @@ Based Off Giannis Antetokounmpo
 Created by trancornellh, awonggong, and mhkpham ~
 
 ![](https://img.shields.io/github/followers/trancornellh?label=trancornellh&style=social) 
-![](https://img.shields.io/github/followers/CaylinCat?label=CaylinCat&style=social)
+![](https://img.shields.io/github/followers/CaylinCat?label=awonggong&style=social)
+![](https://img.shields.io/github/followers/CaylinCat?label=mhkpham&style=social)
