@@ -60,10 +60,6 @@ function addToCart(elem)
         sessionStorage.setItem('cart', stringCart);
         printCart();
     }
-
-
-    //cart.push(product);
-    
 }
 
 function printCart()
@@ -86,24 +82,8 @@ function printCart()
         }
     }
 
-
-
-    /*
-    for (let i = 0; i < cart.length; i++) {
-        //price = cart[i].price;
-        name = cart[i].productname;
-        qty = cart[i].quantity;
-
-        price = parseFloat(cart[i].price.split('$')[1]);
-
-        total += (qty * price);
-        //carttable += qty + "x " + name + "<tr> $" + (price * qty) + "<br>";
-        carttable += "<tr><td>" + name + "</td><td>" + qty + "</td><td>$" + (price * qty).toFixed(2) + "</td></tr>";
-    }
-    */
     document.getElementById("carttable").innerHTML = carttable;
     document.getElementById("total").innerHTML = "$" + total.toFixed(2);
-
 }
 
 function emptyCart()
