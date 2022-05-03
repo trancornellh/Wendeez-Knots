@@ -53,20 +53,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                        <a class="nav-link" href="Home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Menu.html">Menu</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            Order
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Pickup</a></li>
-                            <li><a class="dropdown-item" href="Order Delivery.html">Delivery</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order Delivery.html">Order</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="About Us.html">About Us</a>
@@ -76,17 +69,22 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="email" placeholder="Email" aria-label="Email">
-                    <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
                     <a class="btn btn-outline-light me-2" href="Register.html" role="button">Register</a>
-                    <button class="btn btn-outline-light" type="submit">Login</button>
+                    <a class="btn btn-outline-light" href="Login.html" role="button">Login</a>
                 </form>
             </div>
         </div>
     </nav>
     <!--Navigation Bar-->
     <!--Credit Card Form-->
-    <div class="container-fluid p-5">
+    <div class="container-fluid mt-3 mb-3">
+        <div class="row justify-content-md-left">
+            <div class="col md-1">
+                <a class="btn btn-success btn-outline-success btn-lg btn-block" href="Order Delivery.html" role="button">Back to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-3">
         <div class="row justify-content-md-center">
             <div class="col-md-8">
                 <div class="card mb-7">
@@ -99,14 +97,14 @@
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name" 
-                                               aria-label="First Name" />
+                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                                aria-label="First Name" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name" 
-                                               aria-label="Last Name" />
+                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                                aria-label="Last Name" />
                                     </div>
                                 </div>
                             </div>
@@ -137,8 +135,8 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group form-outline">
-                                        <input type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number" 
-                                               aria-label="Credit Card Number" />
+                                        <input type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
+                                                aria-label="Credit Card Number" />
                                     </div>
                                 </div>
                             </div>
@@ -146,8 +144,8 @@
                             <div class="row mb-4">
                                 <div class="col-3">
                                     <div class="form-outline">
-                                        <input type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date" 
-                                               aria-label="Expiration Date" />
+                                        <input type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
+                                                aria-label="Expiration Date" />
                                     </div>
                                 </div>
                                 <div class="col-3">
@@ -194,56 +192,56 @@
             </div>
         </div>
     </div>
-    <!--Credit Card Form-->
-    <!--Footer-->
-    <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
-        <div class="container p-3">
-            <div class="row mt-1">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0 g-0">
-                    <h5 class="text-uppercase mb-4">About company</h5>
+        <!--Credit Card Form-->
+        <!--Footer-->
+        <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
+            <div class="container p-3">
+                <div class="row mt-1">
+                    <div class="col-lg-6 col-md-12 mb-4 mb-md-0 g-0">
+                        <h5 class="text-uppercase mb-4">About company</h5>
 
-                    <p>
-                        Wendeez Knots is a family owned comfort restaurant.
-                        We were inspired by Giannis Antetokounmpo's love for
-                        food and wanted to dedicate our theme towards him.
-                    </p>
+                        <p>
+                            Wendeez Knots is a family owned comfort restaurant.
+                            We were inspired by Giannis Antetokounmpo's love for
+                            food and wanted to dedicate our theme towards him.
+                        </p>
 
-                    <p>
-                        Come enjoy our food!
-                    </p>
+                        <p>
+                            Come enjoy our food!
+                        </p>
 
-                </div>
-                <div class="col-lg-6 col-md-6 mb-4 mb-md-0 g-0">
-                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4 mb-md-0 g-0">
+                        <h5 class="text-uppercase mb-4">Opening hours</h5>
 
-                    <table class="table text-center text-white">
-                        <tbody class="fw-normal">
-                            <tr>
-                                <td>Monday - Thursday:</td>
-                                <td>9 AM - 9 PM</td>
-                            </tr>
-                            <tr>
-                                <td>Friday - Saturday:</td>
-                                <td>8 AM - 12 AM</td>
-                            </tr>
-                            <tr>
-                                <td>Sunday:</td>
-                                <td>CLOSED</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <table class="table text-center text-white">
+                            <tbody class="fw-normal">
+                                <tr>
+                                    <td>Monday - Thursday:</td>
+                                    <td>9 AM - 9 PM</td>
+                                </tr>
+                                <tr>
+                                    <td>Friday - Saturday:</td>
+                                    <td>8 AM - 12 AM</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday:</td>
+                                    <td>CLOSED</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
-            <a class="text-white" href="Home.html">Wendeez Knots</a>
-        </div>
-    </footer>
-    <!--Footer-->
-    <!--Bootstrap JavaScript-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!--Bootstrap JavaScript-->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="Home.html">Wendeez Knots</a>
+            </div>
+        </footer>
+        <!--Footer-->
+        <!--Bootstrap JavaScript-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!--Bootstrap JavaScript-->
 </body>
 </html>

@@ -62,12 +62,12 @@ session_start();
 
         .h2-d {
             text-align: center;
-            font-size: 300%;
+            font-size: 350%;
             font-weight: bold;
         }
 
         .p-d {
-            font-size: 140%;
+            font-size: 160%;
             font-family: "Lucida Console", "Courier New", monospace;
         }
 
@@ -93,15 +93,8 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="Menu.html">Menu</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Order
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Pickup</a></li>
-                            <li><a class="dropdown-item" href="Order Delivery.html">Delivery</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Order Delivery.html">Order</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="About Us.html">About Us</a>
@@ -111,68 +104,50 @@ session_start();
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="email" placeholder="Email" aria-label="Email">
-                    <input class="form-control me-2" type="password" placeholder="Password" aria-label="Password">
                     <a class="btn btn-outline-light me-2" href="Register.html" role="button">Register</a>
-                    <button class="btn btn-outline-light" type="submit">Login</button>
+                    <a class="btn btn-outline-light" href="Login.html" role="button">Login</a>
                 </form>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid"> 
-		<div class="row">
-			<div class="col-xl-12 col-lg-12 col-md-12 g-0" >
-				<a href="Order Delivery.html">
-					<img class="img-fluid" src=Images/hearty-sunrise.jpg>
-				</a>
-			</div>
-		</div>
-    </div>
-
-    <div class="container" style="margin-top: 50px; background-color: #EEE1C6; height: 400%">
+    <div class="container-fluid">
         <div class="row">
-            <p style="font-size:10px">&nbsp;</p>
-            <div class="col-xl-5 col-lg-4 col-md-4 g-10">
-                <img src="Images/food_deals.jpg" id="deals" class="img-fluid" />
-            </div>
-				
-            <div class="col-xl-7 col-lg-7 col-md-7 g-0">
-                <h2 class="h2-d">WK Deals</h2>
-                <p style="font-size:1px">&nbsp;</p>
-                <p class="p-d"> Why waste money on small portions? Check out our exclusive deals including some of Wendeez Knots favorites</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p class="disclaimer"> *Only available at participating locations and online orders</p>
-                <input class="homebutton" type="submit" onclick="window.location.href='Deals.html';" value="Get Deals" id="dealsBtn"> <!--will add functionallity to this button-->
-            </div>
-				<p style="font-size:10px">&nbsp;</p>
-        </div>
-    </div>
-
-    <p>&nbsp;</p>
-
-    <div class="container" style="margin-top: 50px; background-color: #EEE1C6; height: 400%">
-        <div class="row">
-            <p>&nbsp;</p>
-            <div class="col-xl-7 col-lg-7 col-md-7 g-0">
-                <h2 class="h2-d">Giannis' Order</h2>
-                <p style="font-size:1px">&nbsp;</p>
-                <p class="p-d"> Ever wondered what if feels like being an NBA Champ? Try ordering the Giannis Antetokounmpo's special order</p>
-                <p>&nbsp;</p>
-                <p class="p-d">You Wont regret it!</p>
-                <p>&nbsp;</p>
-                <input class="homebutton" type="submit" onclick="window.location.href='Order Delivery.html';" value="Order Now" id="dealsBtn"> <!--will add functionallity to this button-->
-            </div>
-            <div class="col-xl-1 col-lg-1 col-md-1 g-0"></div>
-            <div class="col-xl-4 col-lg-4 col-md-4 g-0">
-                <img src="Images/giannis-eating.jpg" width=320 height=320 id="gns_eating" class="img-fluid">
+            <div class="col-xl-12 col-lg-12 col-md-12 g-0">
+                <a href="Order Delivery.html">
+                    <img class="img-fluid" src=Images/hearty-sunrise.jpg>
+                </a>
             </div>
         </div>
     </div>
 
+    <div class="containter-fluid p-5 mx-5 my-5" style="background-color: #EEE1C6;">
+        <div class="row justify-content-md-center g-0">
+            <div class="col-3">
+                <img src="Images/giannis-holdingtrophy.jpg" id="deals" class="img-fluid" />
+            </div>
+            <div class="col-9">
+                <h1 class="h2-d text-center">NBA Playoffs</h1>
+                <p class="mx-3 p-d">Bucks fans!</p>
+                <p class="mx-3 p-d">The playoffs are here. From the tipoff to the final buzzer, we got you covered.</p>
+                <p class="mx-3 p-d">Enjoy the $0 delivery fee</p>
+            </div>
+        </div>
+    </div>
 
-    <p>&nbsp;</p>
+    <div class="containter-fluid p-5 mx-5 my-5" style="background-color: #EEE1C6;">
+        <div class="row justify-content-md-center g-0">
+            <div class="col-9">
+                <h1 class="h2-d text-center">Giannis' Order</h1>
+                <p class="mx-3 p-d">Ever wondered what if feels like being an NBA Champ? Try ordering Giannis' special order!</p>
+                <p class="mx-3 p-d">You won't regret it!</p>
+                <a class="mx-3 btn btn-success btn-outline-success btn-lg btn-block" href="Order Delivery.html" role="button">Order Here</a>
+            </div>
+            <div class="col-3">
+                <img src="Images/giannis-eating.jpg" id="deals" class="img-fluid" />
+            </div>
+        </div>
+    </div>
 
     <!--Footer-->
     <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
