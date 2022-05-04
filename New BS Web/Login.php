@@ -103,6 +103,18 @@ session_start();
                                         <input type="password" name="passcode" id="loginpassword" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
                                     </div>
 
+                                    <!--Error Messages-->
+                                    <?php
+                                    if(isset($_GET["error"])){
+                                        if($_GET["error"] == "emptyinput"){
+                                            echo "<p class='lead text-danger text-center'><strong>Fill in all fields</p>";
+                                        }
+                                        else if($_GET["error"] == "usernotfound"){
+                                            echo "<p class='lead text-danger text-center'><strong>User not found</p>";
+                                        }
+                                    }
+                                    ?>
+
                                     <div class="d-grid gap-2">
                                         <button type="submit" name="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Login</button>
                                     </div>
