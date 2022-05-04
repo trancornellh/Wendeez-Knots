@@ -47,7 +47,6 @@ session_start();
                 text-align: left;
                 border-bottom: 1px solid #E0E4CC;
             }
-
         </style>
     </head>
 
@@ -200,14 +199,22 @@ session_start();
                 </div>
                 
                 <div class="row">
-                    <div class="col-xl-10 col-lg-8 col-md-6 col-sm-4 col-4 fs-5">
+                    <div class="col-xl-8 col-lg-7 col-md-5 col-sm-4 col-4 fs-5">
                         <strong>Subtotal</strong>
                         <p class="fs-5" id="total"></p>
                     </div>
-                    <div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3">
+                    <div class="col form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadio" id="Pickup" value="Pickup">
+                        <label class="form-check-label" for="Pickup">Pickup</label>
+                    </div>
+                    <div class="col form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadio" id="Delivery" value="Delivery">
+                        <label class="form-check-label" for="Delivery">Delivery</label>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-3 col-sm-3 col-3">
                         <button class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
                     </div>
-                    <div class="col-xl-1 col-lg-2 col-md-4 col-sm-5 col-5">
+                    <div class="col-xl-1 col-lg-1 col-md-4 col-sm-5 col-5">
                         <button class="proceed btn btn-success btn-outline-success btn-lg btn-block" style="background-color: #00471b; color:white;">Proceed to Checkout</button>
                     </div>
                 </div>
