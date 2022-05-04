@@ -99,7 +99,11 @@ session_start();
             </div>
         </nav>
 
-
+        <?php 
+            if(!isset($_SESSION["userEmail"])){
+             echo '<script>alert("Must be logged in"); window.location.replace("Login.php");</script>';
+            }
+        ?>
         <div class="container-fluid">
             <div class="row justify-content-md-center mx-0 my-3">
                 <div class="product mx-2">
