@@ -70,8 +70,8 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <a class="btn btn-outline-light me-2" href="Register.html" role="button">Register</a>
-                    <a class="btn btn-outline-light" href="Login.html" role="button">Login</a>
+                    <a class="btn btn-outline-light me-2" href="Register.php" role="button">Register</a>
+                    <a class="btn btn-outline-light" href="Login.php" role="button">Login</a>
                 </form>
             </div>
         </div>
