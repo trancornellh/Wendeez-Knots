@@ -104,11 +104,10 @@ function loginUser($conn, $email, $passcode){
     }
 
     else if ($checkPass === true){
-       /* session_start();
-        $_SESSION["userId"] = $emailExists["id"];
+        session_start();
         $_SESSION["userEmail"] = $emailExists["email"];
         header("location: ../Home.php");
-        exit();*/
-        echo "Logged In";
+        exit();
+        //echo "Logged In";
     }
 }

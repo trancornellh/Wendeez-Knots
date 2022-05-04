@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -66,7 +70,7 @@
                         <a class="nav-link" href="About Us.php">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Contact Us.html">Contact Us</a>
+                        <a class="nav-link" href="Contact Us.php">Contact Us</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -184,7 +188,7 @@
         </div>
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2022 Copyright:
-            <a class="text-white" href="Home.html">Wendeez Knots</a>
+            <a class="text-white" href="Home.php">Wendeez Knots</a>
         </div>
     </footer>
 

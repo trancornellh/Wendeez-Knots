@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -68,10 +72,23 @@
                         <a class="nav-link" href="Contact Us.php">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <a class="btn btn-outline-light me-2" href="Register.php" role="button">Register</a>
-                    <a class="btn btn-outline-light" href="Login.php" role="button">Login</a>
-                </form>
+                <!--Entry and Buttons for Login/Register and Logout-->
+                <?php 
+                    if(isset($_SESSION["userEmail"])){
+                        echo "<li class='d-flex'>
+                        <a class='btn btn-outline-light' href='proc_php/logout_p.php'>Log Out</a>
+                        </li>";
+                    }
+                    else{
+                        echo "<li class='d-flex'>
+                        <a class='btn btn-outline-light me-2' href='Register.php'>Register</a>
+                        </li>";
+                        echo "<li class='d-flex'>
+                        <a class='btn btn-outline-light' href='Login.php'>Log in</a>
+                        </li>";
+                    }
+                
+                ?>
             </div>
         </div>
     </nav>

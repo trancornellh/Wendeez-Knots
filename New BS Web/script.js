@@ -98,7 +98,7 @@ function checkout()
 {
     if (sessionStorage.getItem('cart')) {
         var cart = JSON.parse(sessionStorage.getItem('cart'));
-        window.location.replace("Address.php");
+        window.location.replace("Address.html");
     }
     else {
         alert("Cart is Empty");
