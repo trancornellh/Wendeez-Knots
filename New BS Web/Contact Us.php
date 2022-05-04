@@ -57,12 +57,11 @@ session_start();
 		.p-t {
 			color: black;
 			font-size: 140%;
-			margin: 1rem;
 		}
 
 		.contact-form {
-			max-width: 400px;
-			margin: 2rem auto;
+			max-width: 800px;
+			margin: auto;
 			border: 2px solid #333;
 			padding: 2rem;
 			border-radius: 5px;
@@ -164,67 +163,73 @@ session_start();
 			</div>
 		</div>
 	</nav>
-	<p>&nbsp;</p>
 
-	<!--Image Text Grid-->
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xl-4 col-lg-4 col-md-4">
+			<div class=div class="col-12 col-md-9 col-lg-7 col-xl-6">
 				<h1 style="text-align:center;">Contact Us</h1>
-				<p>&nbsp;</p>
-				<p class="p-t" style="text-align:center;">
+				<p class="p-t mt-3" style="text-align:center;">
 					Have questions? Don't hesitate to contact us regarding any comments, issues, or feedback!
 				</p>
-
-				<hr class="small-line">
-
-				<div class="center">
-					<a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
-				</div>
-
-				<div class="social-media-links center" style="text-align:center;">
-
-					<img class="social-media" src="Images/facebook_logo.png" alt="Facebook">
-					<img class="social-media" src="Images/instagram_logo.png" alt="Instagram">
-					<img class="social-media" src="Images/twitter_logo.png" alt="Twitter">
-					<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-						<img class="social-media" src="Images/youtube_logo.png" alt="YouTube">
-					</a>
-				</div>
-			</div>
-
-			<div class="col-xl-8 col-lg-8 col-md-8">
-
-				<form class="contact-form">
-
-					<label class="contact-label" for="support-topic">Support Topic</label>
-					<select id="support-topic" value="Choose Option">
-						<option value="issue">Issue Regarding Order</option>
-						<option value="feedback">Restaurant Feedback/Complaints</option>
-						<option value="inquiry">General Inquiry</option>
-						<option value="other">Other Issue</option>
-					</select>
-
-					<label class="contact-label" for="first-name">First Name</label>
-					<input class="contact-input" type="text" id="first-name">
-
-					<label class="contact-label" for="last-name">Last Name</label>
-					<input class="contact-input" type="text" id="last-name">
-
-					<label class="contact-label" for="email">Email</label>
-					<input class="contact-input" type="text" id="email">
-
-					<label class="contact-label" for="message">Message</label>
-					<textarea class="contact-textarea" id="message"></textarea>
-
-					<input class="contact-input" type="submit" value="Submit" id="submitBtn">
-
-
-				</form>
-
-
 			</div>
 		</div>
+	</div>
+
+	<div class="container-fluid">
+	    <form class="contact-form mb-3">
+		    <div class="row mb-3">
+			    <div class="col">
+				    <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+					    <option selected>Select Issue Here</option>
+					    <option value="feedback">Restaurant Feedback/Complaints</option>
+					    <option value="inquiry">General Inquiry</option>
+					    <option value="other">Other Issue</option>
+				    </select>
+			    </div>
+		    </div>
+
+			<!-- Name input -->
+			<div class="row mb-3">
+				<div class="col">
+					<input class="form-control form-control-lg" id="first-name" type="text" placeholder="First Name" />
+				</div>
+				<div class="col">
+					<input class="form-control form-control-lg" id="last-name" type="text" placeholder="Last Name" />
+				</div>
+			</div>
+
+			<!-- Email address input -->
+			<div class="row mb-3">
+				<div class="col">
+					<input class="form-control form-control-lg" id="email" type="email" placeholder="Email Address" />
+				</div>
+			</div>
+
+			<!-- Message input -->
+			<div class="row mb-3">
+				<div class="col">
+					<textarea class="form-control form-control-lg" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+				</div>
+			</div>
+
+			<!-- Form submit button -->
+			<div class="d-grid mb-3">
+			  <button class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">Submit</button>
+			</div>
+
+			<div class="center">
+				<a id="email-link" href="mailto:support@wendeezknots.com">support@wendeezknots.com</a>
+			</div>
+
+			<div class="social-media-links center" style="text-align:center;">
+				<img class="social-media" src="Images/facebook_logo.png" alt="Facebook">
+				<img class="social-media" src="Images/instagram_logo.png" alt="Instagram">
+				<img class="social-media" src="Images/twitter_logo.png" alt="Twitter">
+				<a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+					<img class="social-media" src="Images/youtube_logo.png" alt="YouTube">
+				</a>
+			</div>
+		</form>
 	</div>
 
 	<!--Footer-->
