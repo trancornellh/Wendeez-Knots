@@ -131,16 +131,16 @@ session_start();
                                     <?php
                                     if(isset($_GET["error"])){
                                         if($_GET["error"] == "emptyinput"){
-                                            echo "<p>Fill in all fields</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>Fill in all fields</p>";
                                         }
                                         else if($_GET["error"] == "invalidemail"){
-                                            echo "<p>Invalid Email</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>Invalid Email</p>";
                                         }
                                         else if($_GET["error"] == "passdontmatch"){
-                                            echo "<p>Password does not match</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>Password does not match</p>";
                                         }
                                         else if($_GET["error"] == "emailtaken"){
-                                            echo "<p>Email has been taken</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>Email has been taken</p>";
                                         }
                                     }
                                     ?>

@@ -107,10 +107,10 @@ session_start();
                                     <?php
                                     if(isset($_GET["error"])){
                                         if($_GET["error"] == "emptyinput"){
-                                            echo "<p>Fill in all fields</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>Fill in all fields</p>";
                                         }
                                         else if($_GET["error"] == "usernotfound"){
-                                            echo "<p>User not found</p>";
+                                            echo "<p class='lead text-danger text-center'><strong>User not found</p>";
                                         }
                                     }
                                     ?>
