@@ -105,8 +105,8 @@ session_start();
             }
         ?>
         <div class="container-fluid">
-            <div class="row justify-content-md-center mx-0 my-3">
-                <div class="product mx-2">
+            <div class="row row-cols-auto align-items-center justify-content-md-center mx-0 my-3">
+                <div class="col product mx-2">
                     <h3 class="productname"> Giannis' Order </h3>
                     <img src="Images/Menu Giannis Order.png" alt="Gorder" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -115,7 +115,7 @@ session_start();
                     <p class="price"> $19.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname"> Greek Freak Burger </h3>
                     <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -124,7 +124,7 @@ session_start();
                     <p class="price"> $10.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname"> The Hearty Sunrise </h3>
                     <img src="Images/Menu Hearty Sunrise.png" alt="HeartyBurger" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -133,7 +133,7 @@ session_start();
                     <p class="price"> $14.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname"> Cheese Pizza </h3>
                     <img src="Images/Menu Cheese Pizza.jpg" alt="Pizza" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -142,7 +142,7 @@ session_start();
                     <p class="price"> $9.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname"> Golden Garlic Knots </h3>
                     <img src="Images/Menu Garlic Knots.png" alt="Knots" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -151,7 +151,7 @@ session_start();
                     <p class="price"> $7.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname"> Greek Freak Fries </h3>
                     <img src="Images/Menu Fries.png" alt="Fries" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -160,9 +160,7 @@ session_start();
                     <p class="price"> $4.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-            </div>
-            <div class="row justify-content-md-center">
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname">Greek Salad</h3>
                     <img src="Images/Menu Salad.jpg" alt="Salad" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -171,7 +169,7 @@ session_start();
                     <p class="price"> $5.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="product mx-2">
+                <div class="col product mx-2">
                     <h3 class="productname">Soda</h3>
                     <img src="Images/Menu Soda.png" alt="Soda" class="img-fluid" style="width:220px;height:220px;">
                     <br />

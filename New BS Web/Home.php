@@ -137,7 +137,7 @@ session_start();
             <div class="col-3">
                 <img src="Images/giannis-holdingtrophy.jpg" id="deals" class="img-fluid" />
             </div>
-            <div class="col-9">
+            <div class="col-md-auto">
                 <h1 class="h2-d text-center">NBA Playoffs</h1>
                 <p class="mx-3 p-d">Bucks fans!</p>
                 <p class="mx-3 p-d">The playoffs are here. From the tipoff to the final buzzer, we got you covered.</p>
