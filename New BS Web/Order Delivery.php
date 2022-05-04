@@ -31,7 +31,7 @@ session_start();
             .product {
                 padding: 1em;
                 border: 1px solid #E0E4CC;
-                margin-right: 1em;
+                margin: auto;
                 border-radius: 5px;
                 height:450px;
                 width:290px;
@@ -39,7 +39,7 @@ session_start();
             }
 
             table {
-                margin-bottom: 2em;
+                margin-bottom: 1em;
                 border-collapse: collapse;
             }
 
@@ -105,8 +105,8 @@ session_start();
             }
         ?>
         <div class="container-fluid">
-            <div class="row row-cols-auto align-items-center justify-content-md-center mx-0 my-3">
-                <div class="col product mx-2">
+            <div class="row row-cols-auto align-self-center justify-content-md-center mx-0 my-3">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> Giannis' Order </h3>
                     <img src="Images/Menu Giannis Order.png" alt="Gorder" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -115,7 +115,7 @@ session_start();
                     <p class="price"> $19.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> Greek Freak Burger </h3>
                     <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -124,7 +124,7 @@ session_start();
                     <p class="price"> $10.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> The Hearty Sunrise </h3>
                     <img src="Images/Menu Hearty Sunrise.png" alt="HeartyBurger" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -133,7 +133,7 @@ session_start();
                     <p class="price"> $14.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> Cheese Pizza </h3>
                     <img src="Images/Menu Cheese Pizza.jpg" alt="Pizza" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -142,7 +142,7 @@ session_start();
                     <p class="price"> $9.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> Golden Garlic Knots </h3>
                     <img src="Images/Menu Garlic Knots.png" alt="Knots" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -151,7 +151,7 @@ session_start();
                     <p class="price"> $7.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname"> Greek Freak Fries </h3>
                     <img src="Images/Menu Fries.png" alt="Fries" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -160,7 +160,7 @@ session_start();
                     <p class="price"> $4.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname">Greek Salad</h3>
                     <img src="Images/Menu Salad.jpg" alt="Salad" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -169,7 +169,7 @@ session_start();
                     <p class="price"> $5.99 </p>
                     <button class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                 </div>
-                <div class="col product mx-2">
+                <div class="col product mx-2 mb-3">
                     <h3 class="productname">Soda</h3>
                     <img src="Images/Menu Soda.png" alt="Soda" class="img-fluid" style="width:220px;height:220px;">
                     <br />
@@ -182,42 +182,37 @@ session_start();
         </div>
         
         <div class="container-fluid">
-            <div class="cart-container">
-                <h2>Cart</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col" width="500px">Product</th>
-                            <th scope="col" width="100px">Quantity</th>
-                            <th scope="col" width="200px">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody id="carttable"> </tbody>
-                </table>
-                <!---
-        <p id="cart"></p>
-        <p id="total"></p>-->
-            </div>
-            <div class="row">
-                <div class="col-xl-7 col-lg-7 col-md-7 g-0"></div>
-                <div class="col-xl-3 col-lg-3 col-md-3 g-0">
-                    <strong>Subtotal</strong>
-                    <p id="total"></p>
+            <div class="cart-container mb-3">
+                <h1>Cart</h1>
+                <div class="row">
+                    <div class="col">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="fs-5" scope="col">Product</th>
+                                    <th class="fs-5" scope="col">Quantity</th>
+                                    <th class="fs-5" scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="fs-5" id="carttable"> </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-xl-10 col-lg-8 col-md-6 col-sm-4 col-4 fs-5">
+                        <strong>Subtotal</strong>
+                        <p class="fs-5" id="total"></p>
+                    </div>
+                    <div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3">
+                        <button class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
+                    </div>
+                    <div class="col-xl-1 col-lg-2 col-md-4 col-sm-5 col-5">
+                        <button class="proceed btn btn-success btn-outline-success btn-lg btn-block" style="background-color: #00471b; color:white;">Proceed to Checkout</button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 g-0"></div>
-                <div class="col-xl-1 col-lg-1 col-md-1 g-0">
-                    <button class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
-                </div>
-                <div class="col-xl-1 col-lg-1 col-md-1 g-0">
-                    <button class="proceed btn btn-success btn-outline-success btn-lg btn-block" style="background-color: #00471b; color:white;">Proceed to Checkout</button>
-                </div>
-            </div>
-
-            <p>&nbsp;</p>
         </div>
-        
 
         <!--Footer-->
         <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
