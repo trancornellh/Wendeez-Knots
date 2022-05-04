@@ -204,12 +204,12 @@ session_start();
                         <p class="fs-5" id="total"></p>
                     </div>
                     <div class="col form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadio" id="Pickup" value="Pickup">
+                        <input class="form-check-input" type="radio" name="inlineRadio" id="Pickup" value="Pickup" checked ="checked">
                         <label class="form-check-label" for="Pickup">Pickup</label>
                     </div>
                     <div class="col form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadio" id="Delivery" value="Delivery">
-                        <label class="form-check-label" for="Delivery">Delivery</label>
+                        <input class="form-check-input"  type="radio" name="inlineRadio" id="Delivery" value="Delivery">
+                        <label class="form-check-label"  for="Delivery">Delivery</label>
                     </div>
                     <div class="col-xl-1 col-lg-1 col-md-3 col-sm-3 col-3">
                         <button class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
