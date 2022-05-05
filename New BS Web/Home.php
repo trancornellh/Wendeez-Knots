@@ -135,10 +135,10 @@ session_start();
     <div class="containter-fluid p-5 mx-5 my-5" style="background-color: #EEE1C6;">
         <div class="row justify-content-md-center g-0">
             <div class="col-3">
-                <img src="Images/giannis-holdingtrophy.jpg" id="deals" class="img-fluid" />
+                <img src="Images/giannis-holdingtrophy.jpg" id="deals" class="img-fluid d-none d-md-block" />
             </div>
             <div class="col-md-auto">
-                <h1 class="h2-d text-center">NBA Playoffs</h1>
+                <h1 class="h2-d text-center mb-5">NBA Playoffs</h1>
                 <p class="mx-3 p-d">Bucks fans!</p>
                 <p class="mx-3 p-d">The playoffs are here. From the tipoff to the final buzzer, we got you covered.</p>
                 <p class="mx-3 p-d">Enjoy the $0 delivery fee</p>
@@ -149,13 +149,13 @@ session_start();
     <div class="containter-fluid p-5 mx-5 my-5" style="background-color: #EEE1C6;">
         <div class="row justify-content-md-center g-0">
             <div class="col-9">
-                <h1 class="h2-d text-center">Giannis' Order</h1>
+                <h1 class="h2-d text-center mb-5">Giannis' Order</h1>
                 <p class="mx-3 p-d">Ever wondered what if feels like being an NBA Champ? Try ordering Giannis' special order!</p>
                 <p class="mx-3 p-d">You won't regret it!</p>
                 <a class="mx-3 btn btn-success btn-outline-success btn-lg btn-block" href="Order Delivery.php" role="button">Order Here</a>
             </div>
             <div class="col-3">
-                <img src="Images/giannis-eating.jpg" id="deals" class="img-fluid" />
+                <img src="Images/giannis-eating.jpg" id="deals" class="img-fluid d-none d-md-block" />
             </div>
         </div>
     </div>
