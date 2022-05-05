@@ -14,6 +14,7 @@ for (var i = 0; i < chc.length; i++) {
     chc[i].addEventListener('click', function () { checkout() });
 }
 
+
 function addToCart(elem)
 {
     var getPrice;
@@ -97,8 +98,12 @@ function emptyCart()
 function checkout()
 {
     if (sessionStorage.getItem('cart')) {
-        var cart = JSON.parse(sessionStorage.getItem('cart'));
-        window.location.replace("Address.php");
+        if(document.getElementById("Delivery").checked)
+            window.location.replace("Address.php");
+        else if (document.getElementById("Pickup").checked)
+            window.location.replace("Billing.php");
+        else
+            alert("Please choose Pickup or Delivery");
     }
     else {
         alert("Cart is Empty");

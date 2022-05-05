@@ -112,18 +112,21 @@ session_start();
                         <form>
                             <!-- 2 column grid layout with text inputs for the first and last names -->
                             <div class="row mb-4">
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
-                                               aria-label="First Name" />
+                                <?php
+                                     echo '<div class="col">
+                                        <div class="form-outline">
+                                            <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                                   aria-label="First Name" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-outline">
-                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
-                                               aria-label="Last Name" />
-                                    </div>
-                                </div>
+                                    <div class="col">
+                                        <div class="form-outline">
+                                            <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                                   aria-label="Last Name" />
+                                        </div>
+                                    </div>'
+    
+                                ?>
                             </div>
 
                             <!-- Text input -->
@@ -133,7 +136,9 @@ session_start();
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />
+                                <?php
+                                    echo '<input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />'
+                                ?>
                             </div>
 
                             <!-- Number input -->
