@@ -112,38 +112,35 @@ session_start();
                         <form>
                             <!-- 2 column grid layout with text inputs for the first and last names -->
                             <div class="row mb-4">
-                                <?php
-                                     echo '<div class="col">
-                                        <div class="form-outline">
-                                            <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
-                                                   aria-label="First Name" />
-                                        </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                            aria-label="First Name"   />
                                     </div>
-                                    <div class="col">
-                                        <div class="form-outline">
-                                            <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
-                                                   aria-label="Last Name" />
-                                        </div>
-                                    </div>'
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                                aria-label="Last Name"  />
+                                    </div>
+                                </div>
     
-                                ?>
                             </div>
 
                             <!-- Text input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address" />
+                                <input type="text" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
                             </div>
 
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <?php
-                                    echo '<input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />'
-                                ?>
+                                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email"  />
+
                             </div>
 
                             <!-- Number input -->
                             <div class="form-outline mb-4">
-                                <input type="number" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone" />
+                                <input type="number" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone"  />
                             </div>
 
                             <!-- Message input -->
@@ -181,7 +178,7 @@ session_start();
                             </li>
                         </ul>
 
-                        <button type="submit" name="submit" class="btn btn-success btn-outline-success btn-lg btn-block">Proceed to Checkout</button>
+                        <button class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
@@ -238,6 +235,6 @@ session_start();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!--Bootstrap JavaScript-->
-    <script src="script1.js"></script>
+    <script src="Script1.js"></script>
 </body>
 </html>

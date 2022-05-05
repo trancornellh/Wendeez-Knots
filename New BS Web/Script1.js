@@ -1,5 +1,10 @@
 // JavaScript source code
 loadCart();
+var chk = document.getElementsByClassName('checkB');
+for (var i = 0; i < chk.length; i++) {
+    chk[i].addEventListener('click', function () { checkBlanks() });
+}
+
 function loadCart() {
     var food = "";
     var cost = 0;
@@ -22,5 +27,19 @@ function loadCart() {
     }
     total += (total * .095);
     document.getElementById("total").innerHTML = "$" + total.toFixed(2);
-    
+}
+
+function checkBlanks() {
+    if (!document.getElementById('firstname').value.match(/\S/))
+        alert("Please Fill All The Required Blanks");
+    else if (!document.getElementById('lastname').value.match(/\S/))
+        alert("Please Fill All The Required Blanks");
+    else if (!document.getElementById('address').value.match(/\S/))
+        alert("Please Fill All The Required Blanks");
+    else if (!document.getElementById('email').value.match(/\S/))
+        alert("Please Fill All The Required Blanks");
+    else if (!document.getElementById('phone').value.match(/\S/))
+        alert("Please Enter A Valid Phone Number");
+    else
+    window.location.replace("Billing.php");
 }

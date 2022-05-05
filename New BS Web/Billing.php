@@ -188,8 +188,8 @@ session_start();
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                Food Cost
-                                <span>$53.98</span>
+                                <p id="food"></p>
+                                <span><p id="cost"></p></span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                                 Shipping
@@ -201,7 +201,7 @@ session_start();
                                     <br>
                                     <strong>(Includes Tax and Delivery)</strong>
                                 </div>
-                                <span><strong>$53.98</strong></span>
+                                <span><strong id="total"></strong></span>
                             </li>
                         </ul>
                     </div>
@@ -260,5 +260,6 @@ session_start();
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!--Bootstrap JavaScript-->
+        <script src="script1.js"></script>
 </body>
 </html>
