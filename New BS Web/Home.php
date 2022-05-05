@@ -8,7 +8,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="icon" type="image/png" sizes="16x16 32x32 64x64" href="Images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16 32x32 64x64 128x128 256x256" href="Images/favicon.png">
 
     <!--Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -78,7 +78,10 @@ session_start();
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00471b;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-3" href="Home.php">Wendeez Knots</a>
+            <a class="navbar-brand fs-3 p-0" href="Home.php">
+                <img src="Images/Burger Logo.svg" width="42" height="42" class="d-inline-block align-top" alt="">
+                Wendeez Knots
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
