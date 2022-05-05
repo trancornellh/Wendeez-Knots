@@ -95,7 +95,7 @@ session_start();
 
     <!--Image Text Grid-->
     <div class="container-fluid g-0">
-        <div class="d-sm-flex mx-4 my-4">
+        <div class="d-lg-flex mx-4 my-4">
             <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Giannis Order.png" alt="Burger" class="img-fluid" />
             </div>
@@ -111,7 +111,7 @@ session_start();
                 </p>
             </div>
 
-            <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
+            <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Hearty Sunrise.png" alt="Fries" class="img-fluid" />
             </div>
             <div class="col" style="border:1px solid #ddd">
@@ -128,7 +128,7 @@ session_start();
             </div>
         </div>
 
-        <div class="d-sm-flex mx-4 mb-4">
+        <div class="d-lg-flex mx-4 mb-4">
             <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" />
             </div>
@@ -166,7 +166,7 @@ session_start();
             </div>
         </div>
 
-        <div class="d-sm-flex mx-4 mb-4">
+        <div class="d-lg-flex mx-4 mb-4">
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
                 <img src="Images/Menu Garlic Knots.png" alt="Garlic Knots" class="img-fluid" />
             </div>
@@ -202,7 +202,7 @@ session_start();
             </div>
         </div>
 
-        <div class="d-sm-flex mx-4 mb-4">
+        <div class="d-lg-flex mx-4 mb-4">
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
                 <img src="Images/Menu Salad.jpg" alt="Garlic Knots" class="img-fluid" />
             </div>
