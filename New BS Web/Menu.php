@@ -94,34 +94,33 @@ session_start();
     </nav>
 
     <!--Image Text Grid-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
+    <div class="container-fluid g-0">
+        <div class="d-sm-flex mx-4 my-4">
+            <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Giannis Order.png" alt="Burger" class="img-fluid" />
             </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Giannis' Order</h1>
-                    <h1 class="alignright">$19.99</h1>
+            <div class="col" style="border:1px solid #ddd">
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Giannis' Order</h1>
+                    <h1>$19.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     Giannis' Order consists of the Greek Freak Burger, Greek Freak Fries,
                     Golden Garlic Knots and a Soda of your choice. Giannis likes Sprite!
                 </p>
             </div>
+
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
                 <img src="Images/Menu Hearty Sunrise.png" alt="Fries" class="img-fluid" />
             </div>
-
-            <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">The Hearty Sunrise</h1>
-                    <h1 class="alignright">$14.99</h1>
+            <div class="col" style="border:1px solid #ddd">
+                <div class="d-flex justify-content-between p-2">
+                    <h1>The Hearty Sunrise</h1>
+                    <h1>$14.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     LIMITED TIME! The Hearty Sunrise consists of 1/2 lb beef patty, sunny
                     side up egg, bacon, lettuce, american cheese and pickles. It has the
                     chef special white sauce. The chef special sauce is made fresh daily.
@@ -129,18 +128,18 @@ session_start();
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
+        <div class="d-sm-flex mx-4 mb-4">
+            <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" />
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Greek Freak Burger</h1>
-                    <h1 class="alignright">$11.99</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Greek Freak Burger</h1>
+                    <h1>$11.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     The Greek Freak Burger consists of tomato, bacon, onion, american
                     cheese, lettuce, and 1/2 lb meat patty sandwiched between sesame buns.
                     We use our special formula of 85% chuck and 15% sirloin for our
@@ -153,12 +152,12 @@ session_start();
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Cheese Pizza</h1>
-                    <h1 class="alignright">$9.99</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Cheese Pizza</h1>
+                    <h1>$9.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     Our cheese pizza consists of our special pizza dough and
                     mozzarella cheese. Under the cheese is the chef special white sauce.
                     Extra white sauce available upon request. Comes with meaty or 
@@ -167,18 +166,18 @@ session_start();
             </div>
         </div>
 
-        <div class="row">
+        <div class="d-sm-flex mx-4 mb-4">
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
                 <img src="Images/Menu Garlic Knots.png" alt="Garlic Knots" class="img-fluid" />
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Golden Garlic Knots</h1>
-                    <h1 class="alignright">$7.99</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Golden Garlic Knots</h1>
+                    <h1>$7.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     Wendeez Famous Garlic Knots are homemade to be extra soft and fluffy.
                     We use our special pizza dough and top it off with flavorful garlic herb
                     butter before and after baking. These are the best garlic knots by far
@@ -190,12 +189,12 @@ session_start();
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Greek Freak Fries</h1>
-                    <h1 class="alignright">$4.99</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Greek Freak Fries</h1>
+                    <h1>$4.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     Our Greek Freak Fries are sourced weekly and locally from Seabreeze
                     Family Farm. We double fry our fries in canola oil allowing for the
                     fry to be crispy on the outside and fluffy on the inside.
@@ -203,18 +202,18 @@ session_start();
             </div>
         </div>
 
-        <div class="row">
+        <div class="d-sm-flex mx-4 mb-4">
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
                 <img src="Images/Menu Salad.jpg" alt="Garlic Knots" class="img-fluid" />
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Greek Salad</h1>
-                    <h1 class="alignright">$5.99</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Greek Salad</h1>
+                    <h1>$5.99</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     The Greek Salad consists of tomatoes, green bell pepper,
                     red onion, olives and feta cheese.
                 </p>
@@ -224,12 +223,12 @@ session_start();
             </div>
 
             <div class="col-xl-4 col-lg-4 col-md-4" style="border:1px solid #ddd">
-                <div id="textbox">
-                    <h1 class="alignleft">Soda</h1>
-                    <h1 class="alignright">$1.49</h1>
+                <div class="d-flex justify-content-between p-2">
+                    <h1>Soda</h1>
+                    <h1>$1.49</h1>
                 </div>
                 <div style="clear: both;"></div>
-                <p>
+                <p class="p-2">
                     We currently carry 4 soda varieties. Coca Cola, MUG Root Beer, Orange Fanta and Sprite!
                 </p>
             </div>
