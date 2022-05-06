@@ -49,10 +49,7 @@ session_start();
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00471b;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-3 p-0" href="Home.php">
-                <img src="Images/Burger Logo.svg" width="42" height="42" class="d-inline-block align-top" alt="">
-                Wendeez Knots
-            </a>
+            <a class="navbar-brand fs-3" href="Home.php">Wendeez Knots</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -112,10 +109,10 @@ session_start();
                         <h5 class="mb-0">Billing Details</h5>
                     </div>
                     <div class="card-body">
-                        <form id="billingForm">
+                        <form id="billingForm" action="proc_php/placeOrder_p.php" method="post">
 
                             <?php
-                                echo "<p style ='font-size: xx-large' class='text-center text-large'>Email: " . $_SESSION["userEmail"] . "</p>";
+                                echo "<p style ='font-size: xx-large' class='text-center text-large'>User: " . $_SESSION["userEmail"] . "</p>";
                             ?>
 
                             <hr>
@@ -162,12 +159,12 @@ session_start();
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="formNameOnCard" class="form-control form-control-lg" placeholder="Name on Card" aria-label="Name on Card" />
+                                        <input name="cardname" type="text" id="formNameOnCard" class="form-control form-control-lg" placeholder="Name on Card" aria-label="Name on Card" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group form-outline">
-                                        <input type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
+                                        <input name="cardnum" type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
                                                 aria-label="Credit Card Number" />
                                     </div>
                                 </div>
@@ -176,18 +173,18 @@ session_start();
                             <div class="row mb-4">
                                 <div class="col-3">
                                     <div class="form-outline">
-                                        <input type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
+                                        <input name="expdate" type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
                                                 aria-label="Expiration Date" />
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group form-outline">
-                                        <input type="text" id="formCVV" class="form-control form-control-lg" placeholder="CVV" aria-label="CVV" />
+                                        <input name="cardpin" type="text" id="formCVV" class="form-control form-control-lg" placeholder="CVV" aria-label="CVV" />
                                     </div>
                                 </div>
                             </div>
 
-                            <button name="placeOrder" action="proc_php/placeOrder_p.php" method="post" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
+                            <button name="placeOrderPickup" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
                                 Confirm Payment
                             </button>
                         </form>

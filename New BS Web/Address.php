@@ -112,10 +112,10 @@ session_start();
                         <h5 class="mb-0">Delivery Details</h5>
                     </div>
                     <div class="card-body">
-                        <form id="shippingForm" action="proc_php/shipping_p.php" method="post">
+                        <form id="shippingForm" action="proc_php/placeOrder_p.php" method="post">
                             
                             <?php
-                                echo "<p style ='font-size: xx-large' class='text-center text-large'>Email: " . $_SESSION["userEmail"] . "</p>";
+                                echo "<p style ='font-size: xx-large' class='text-center text-large'>User: " . $_SESSION["userEmail"] . "</p>";
                             ?>
 
                             <hr>
@@ -124,13 +124,13 @@ session_start();
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                        <input type="text" name="firstnameShip" id="firstname" class="form-control form-control-lg" placeholder="First Name"
                                             aria-label="First Name"   />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                        <input type="text" name="lastnameShip" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
                                                 aria-label="Last Name"  />
                                     </div>
                                 </div>
@@ -138,25 +138,20 @@ session_start();
 
                             <!-- Text input -->
                             <div class="form-outline mb-4">
-                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
+                                <input type="text" name="addressShip" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
                             </div>
 
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" name="city" id="city" class="form-control form-control-lg" placeholder="City" aria-label="City"   />
+                                        <input type="text" name="cityShip" id="city" class="form-control form-control-lg" placeholder="City" aria-label="City"   />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode"  />
+                                        <input type="number" name="zipcodeShip" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode"  />
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Number input -->
-                            <div class="form-outline mb-4">
-                                <input type="number" name="phone" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone"  />
                             </div>
 
                             <!-- Message input -->
@@ -164,56 +159,13 @@ session_start();
                                 <textarea class="form-control form-control-lg" name = "addInfo" placeholder="Additional Information" aria-label="Additional Information"
                                           id="form7Example7" rows="4"></textarea>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="card-header py-3">
-                        <h5 class="mb-0">Summary</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                <p id="food"></p>
-                                <span><p id="cost"></p></span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                Shipping
-                                <span>Knot Delivery</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                <div>
-                                    <strong>Total Amount</strong>
-                                    <br>
-                                    <strong>(Includes Tax and Delivery)</strong>
-                                </div>
-                                <span><strong id="total"></strong></span>
-                            </li>
-                        </ul>
+                            <hr class="my-4" />
 
-                        <button type="submit" name="addressCheckout" form="shippingForm" class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Confirm Payment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Billing Details-->
+                            <h5 class="mb-4">Billing Details</h5>
 
-    <div class="container-fluid mt-3 mb-3">
-        <div class="row justify-content-md-left">
-            <div class="col-md-8">
-                <div class="card mb-7">
-                    <div class="card-header py-3">
-                        <h5 class="mb-0">Billing Details</h5>
-                    </div>
-                    <div class="card-body">
-                        <form id="billingForm">
-
-                            <!--Text Inputs for First and Last Names-->
-                            <div class="row mb-4">
+                             <!--Text Inputs for First and Last Names-->
+                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
                                         <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="First Name"
@@ -254,12 +206,12 @@ session_start();
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="formNameOnCard" class="form-control form-control-lg" placeholder="Name on Card" aria-label="Name on Card" />
+                                        <input type="text" name="cardname" id="formNameOnCard" class="form-control form-control-lg" placeholder="Name on Card" aria-label="Name on Card" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-group form-outline">
-                                        <input type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
+                                        <input type="text" name="cardnum" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
                                                 aria-label="Credit Card Number" />
                                     </div>
                                 </div>
@@ -268,22 +220,55 @@ session_start();
                             <div class="row mb-4">
                                 <div class="col-3">
                                     <div class="form-outline">
-                                        <input type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
+                                        <input type="text" name="expdate" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
                                                 aria-label="Expiration Date" />
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group form-outline">
-                                        <input type="text" id="formCVV" class="form-control form-control-lg" placeholder="CVV" aria-label="CVV" />
+                                        <input type="text" name="cardpin" id="formCVV" class="form-control form-control-lg" placeholder="CVV" aria-label="CVV" />
                                     </div>
                                 </div>
                             </div>
+
+
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header py-3">
+                        <h5 class="mb-0">Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                <p id="food"></p>
+                                <span><p id="cost"></p></span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                Shipping
+                                <span>Knot Delivery</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                <div>
+                                    <strong>Total Amount</strong>
+                                    <br>
+                                    <strong>(Includes Tax and Delivery)</strong>
+                                </div>
+                                <span><strong id="total"></strong></span>
+                            </li>
+                        </ul>
+
+                        <button type="submit" name="placeOrderDelivery" form="shippingForm" class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Confirm Payment</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!--Footer-->
     <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
         <div class="container p-3">

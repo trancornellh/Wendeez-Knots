@@ -50,10 +50,7 @@ session_start();
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00471b;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-3 p-0" href="Home.php">
-                <img src="Images/Burger Logo.svg" width="42" height="42" class="d-inline-block align-top" alt="">
-                Wendeez Knots
-            </a>
+            <a class="navbar-brand fs-3" href="Home.php">Wendeez Knots</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
