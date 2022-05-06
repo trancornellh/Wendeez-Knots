@@ -134,7 +134,6 @@ session_start();
                                                 aria-label="Last Name"  />
                                     </div>
                                 </div>
-    
                             </div>
 
                             <!-- Text input -->
@@ -142,14 +141,17 @@ session_start();
                                 <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
                             </div>
 
-                            <!-- Text input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" name="city" id="city" class="form-control form-control-lg" placeholder="City" aria-label="City"   />
-                            </div>
-
-                            <!-- Number input -->
-                            <div class="form-outline mb-4">
-                                <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode"  />
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" name="city" id="city" class="form-control form-control-lg" placeholder="City" aria-label="City"   />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode"  />
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Number input -->
