@@ -1,5 +1,10 @@
 // JavaScript source code
 loadCart();
+var confPay = document.getElementsByClassName('yay');
+for (var i = 0; i < confPay.length; i++) {
+    confPay[i].addEventListener('click', function () { storeCustomer(); });
+}
+
 //var chk = document.getElementsByClassName('checkB');
 //for (var i = 0; i < chk.length; i++) {
   //  chk[i].addEventListener('click', function () { checkBlanks() });
@@ -25,10 +30,15 @@ function loadCart() {
             document.getElementById("cost").innerHTML += "$" + cost + "<br>";
         }
     }
-    total += (total * .095);
-    document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+    var tax = total * .0725;
+    total += (total * .0725);
+    document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    document.getElementById("tax").innerHTML = "Tax: $" + tax.toFixed(2);
 }
 
+function storeCustomer() {
+    
+}
 /*
 function checkBlanks() {
     if (!document.getElementById('firstname').value.match(/\S/)) {

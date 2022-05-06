@@ -49,7 +49,10 @@ session_start();
     <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00471b;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-3" href="Home.php">Wendeez Knots</a>
+            <a class="navbar-brand fs-3 p-0" href="Home.php">
+                <img src="Images/Burger Logo.svg" width="42" height="42" class="d-inline-block align-top" alt="">
+                Wendeez Knots
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,49 +108,34 @@ session_start();
                                     <p class="text-center" style="font-size: 30px;">Thanks! See you again soon!</p>
                                     <div class="row">
                                         <ul class="list-unstyled">
-                                            <li class="text-black">Jeff Bezos</li>
+                                            <li class="text-black" id="custName"></li>
                                             <li class="text-muted mt-1"><span class="text-black">Invoice</span> #69420</li>
-                                            <li class="ordertype text-black mt-1">For Pickup</li>
-                                            <li class="text-black mt-1">April 29 2022</li>
+                                            <li class="text-black mt-1">May 6 2022</li>
                                         </ul>
                                         <hr>
+                                    </div>
+                                    <div class="row">
                                         <div class="col-xl-10">
-                                            <p>Giannis' Order</p>
+                                            <p id="food"></p>
                                         </div>
                                         <div class="col-xl-2">
-                                            <p class="float-end">
-                                                $19.99
+                                            <p class="float-end" id="cost">
                                             </p>
                                         </div>
                                         <hr>
                                     </div>
+ 
                                     <div class="row">
-                                        <div class="col-xl-10">
-                                            <p>Cheese Pizza</p>
-                                        </div>
-                                        <div class="col-xl-2">
-                                            <p class="float-end">
-                                                $9.99
-                                            </p>
-                                        </div>
-                                        <hr>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-10">
-                                            <p>Greek Salad</p>
-                                        </div>
-                                        <div class="col-xl-2">
-                                            <p class="float-end">
-                                                $5.99
-                                            </p>
-                                        </div>
-                                        <hr style="border: 2px solid black;">
-                                    </div>
-                                    <div class="row text-black">
-
                                         <div class="col-xl-12">
-                                            <p class="float-end fw-bold">
-                                                Total: $35.97
+                                            <p class="float-end" id="tax">
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <p class="float-end fw-bold" id="total">
+                                            Total
                                             </p>
                                         </div>
                                         <hr style="border: 2px solid black;">
@@ -210,5 +198,6 @@ session_start();
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="Script1.js"></script>
 </body>
 </html>
