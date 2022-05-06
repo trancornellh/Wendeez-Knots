@@ -185,7 +185,7 @@ session_start();
                             </div>
                             <div class="row">
                                 <div class="col-3">
-                                    <button name="placeOrderPickup" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
+                                    <button name="placeOrderPickup" form="billingForm" class="yay btn btn-success btn-outline-success btn-lg btn-block" type="submit">
                                         Confirm Payment
                                     </button>
                                 </div>
