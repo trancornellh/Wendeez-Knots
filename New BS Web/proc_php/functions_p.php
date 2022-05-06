@@ -72,7 +72,7 @@ function createUser($conn, $email, $passcode, $fname, $lname){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    header("location: ../Register.php");
+    header("location: ../Register.php?error=none-success");
     exit();
 
 }
@@ -208,7 +208,7 @@ function sendFeedback($conn, $issue, $fname, $lname, $email, $message){
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "issss", $fnameContact);
+    mysqli_stmt_bind_param($stmt, "sssss", $issue, $fname, $lname, $email, $message);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
@@ -216,3 +216,30 @@ function sendFeedback($conn, $issue, $fname, $lname, $email, $message){
     exit();
 
 }
+
+function emptyInputContact($fname, $lname, $email, $message){
+    $result='';
+    if(empty($fname) || empty($lname) || empty($email) || empty($message)){
+        $result=true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+}
+
+/*function cart($conn){
+    $name = mysqli_query($conn, "SELECT item_name FROM menu WHERE item_id = '". $orderEmail ."';");
+    $price = mysqli_query($conn, "SELECT item_price FROM menu WHERE item_id = '". $orderEmail ."';");
+    $custID = mysqli_fetch_assoc($query);
+
+    $sql = "INSERT INTO orders (customer_id, cust_fname, cust_lname) VALUES (".$custID["id"].",?,?)";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../Order Delivery.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ss", $fname, $lname);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+}*/

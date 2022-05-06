@@ -142,6 +142,9 @@ session_start();
                                         else if($_GET["error"] == "emailtaken"){
                                             echo "<p class='lead text-danger text-center'><strong>Email has been taken</p>";
                                         }
+                                        else if($_GET["error"] == "none-success"){
+                                            echo "<p class='lead text-primary text-center'><strong>Registration Successful</p>";
+                                        }
                                     }
                                     ?>
 

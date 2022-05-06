@@ -180,7 +180,7 @@ session_start();
 		    <div class="row mb-3">
 			    <div class="col">
 				    <select name="issue" class="form-select form-select-lg" aria-label=".form-select-lg example">
-					    <option name="x" selected>Select Issue Here</option>
+					    <option name="x" value="none" selected>Select Issue Here</option>
 					    <option name="f" value="feedback">Restaurant Feedback/Complaints</option>
 					    <option name="i" value="inquiry">General Inquiry</option>
 					    <option name="o" value="other">Other Issue</option>
@@ -194,24 +194,35 @@ session_start();
 					<input name ="fname" class="form-control form-control-lg" id="first-name" type="text" placeholder="First Name" />
 				</div>
 				<div class="col">
-					<input class="form-control form-control-lg" id="last-name" type="text" placeholder="Last Name" />
+					<input name="lname" class="form-control form-control-lg" id="last-name" type="text" placeholder="Last Name" />
 				</div>
 			</div>
 
 			<!-- Email address input -->
 			<div class="row mb-3">
 				<div class="col">
-					<input class="form-control form-control-lg" id="email" type="email" placeholder="Email Address" />
+					<input name="email" class="form-control form-control-lg" id="email" type="email" placeholder="Email Address" />
 				</div>
 			</div>
 
 			<!-- Message input -->
 			<div class="row mb-3">
 				<div class="col">
-					<textarea class="form-control form-control-lg" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+					<textarea name="message" class="form-control form-control-lg" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
 				</div>
 			</div>
 
+			 <!--Error Messages-->
+			<?php
+                if(isset($_GET["error"])){
+                    if($_GET["error"] == "emptyinput"){
+                        echo "<p class='lead text-center'><strong>***Fill in all fields***</p>";
+                    }
+					else if($_GET["error"] == "selectissue"){
+                        echo "<p class='lead text-center'><strong>***Select an issue***</p>";
+                    }
+				}
+            ?>
 			<!-- Form submit button -->
 			<div class="d-grid mb-3">
 			  <button name="submitForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">Submit</button>
