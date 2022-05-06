@@ -96,7 +96,7 @@ session_start();
         </div>
     </nav>
     <!--Navigation Bar-->
-    <!--Billing Details-->
+    <!--Delivery Details-->
     <div class="container-fluid mt-3 mb-3">
         <div class="row justify-content-md-left">
             <div class="col md-1">
@@ -194,13 +194,96 @@ session_start();
                             </li>
                         </ul>
 
-                        <button type="submit" name="addressCheckout" form="shippingForm" class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Proceed to Checkout</button>
+                        <button type="submit" name="addressCheckout" form="shippingForm" class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Confirm Payment</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--Billing Details-->
+
+    <div class="container-fluid mt-3 mb-3">
+        <div class="row justify-content-md-left">
+            <div class="col-md-8">
+                <div class="card mb-7">
+                    <div class="card-header py-3">
+                        <h5 class="mb-0">Billing Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="billingForm">
+
+                            <!--Text Inputs for First and Last Names-->
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                                aria-label="First Name" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                                aria-label="Last Name" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Text Input-->
+                            <div class="form-outline mb-4">
+                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address" />
+                            </div>
+
+                            <!--Text Input-->
+                            <div class="form-outline mb-4">
+                                <input type="text" name="city" id="address" class="form-control form-control-lg" placeholder="City" aria-label="City" />
+                            </div>
+
+                            <!--Number Input-->
+                            <div class="form-outline mb-4">
+                                <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode" />
+                            </div>
+
+                            <!--Number Input-->
+                            <div class="form-outline mb-4">
+                                <input type="number" name="phone" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone" />
+                            </div>
+
+                            <hr class="my-4" />
+
+                            <h5 class="mb-4">Payment</h5>
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="form-outline">
+                                        <input type="text" id="formNameOnCard" class="form-control form-control-lg" placeholder="Name on Card" aria-label="Name on Card" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group form-outline">
+                                        <input type="text" id="formCardNumber" class="form-control form-control-lg" placeholder="Credit Card Number"
+                                                aria-label="Credit Card Number" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-3">
+                                    <div class="form-outline">
+                                        <input type="text" id="formExpiration" class="form-control form-control-lg" placeholder="Expiration Date"
+                                                aria-label="Expiration Date" />
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group form-outline">
+                                        <input type="text" id="formCVV" class="form-control form-control-lg" placeholder="CVV" aria-label="CVV" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--Footer-->
     <footer class="text-white text-center text-lg-start" style="background-color: #00471b;">
         <div class="container p-3">
