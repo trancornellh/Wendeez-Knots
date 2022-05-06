@@ -165,6 +165,11 @@ function placeOrder($conn, $fname, $lname, $orderEmail){
     mysqli_stmt_close($stmt);
 }
 
+function createOrderNum($conn){
+    mysqli_query($conn, "UPDATE orders SET order_num = order_id");
+    mysqli_close($conn);
+}
+
 function emptyInputShip($fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip){
     $result='';
     if(empty($fnameShip) || empty($lnameShip) || empty($addressShip) || empty($cityShip) || empty($zipcodeShip)){
@@ -243,3 +248,10 @@ function emptyInputContact($fname, $lname, $email, $message){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }*/
+
+function invoice($conn, $orderNum){
+    $invoiceNum = mysqli_query($conn, "SELECT order_num FROM orders WHERE order_id = '". $orderNum ."';");
+    $iFname = mysqli_query($conn, "SELECT fname FROM orders WHERE order_id = '". $orderNum ."';");
+    $iLname = mysqli_query($conn, "SELECT lname FROM orders WHERE order_id = '". $orderNum ."';");
+    mysqli_close($conn);
+}

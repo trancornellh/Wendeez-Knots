@@ -30,10 +30,14 @@ if(isset($_POST["placeOrderPickup"])){
 
     placeOrder($conn, $fname, $lname, $orderEmail);
 
+    createOrderNum($conn);
+
     //billingInfo($conn, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
     
     paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);    
     
+
+
     header("location: ../Invoice.php");
     exit();
     
@@ -80,6 +84,8 @@ if(isset($_POST["placeOrderPickup"])){
         
 
         placeOrder($conn, $fname, $lname, $orderEmail);
+
+        createOrderNum($conn);
 
         shippingInfo($conn, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
     
