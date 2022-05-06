@@ -1,14 +1,5 @@
 // JavaScript source code
 loadCart();
-var confPay = document.getElementsByClassName('yay');
-for (var i = 0; i < confPay.length; i++) {
-    confPay[i].addEventListener('click', function () { storeCustomer(); });
-}
-
-//var chk = document.getElementsByClassName('checkB');
-//for (var i = 0; i < chk.length; i++) {
-  //  chk[i].addEventListener('click', function () { checkBlanks() });
-//}
 
 function loadCart() {
     var food = "";
@@ -36,29 +27,3 @@ function loadCart() {
     document.getElementById("tax").innerHTML = "Tax: $" + tax.toFixed(2);
 }
 
-function storeCustomer() {
-    
-}
-/*
-function checkBlanks() {
-    if (!document.getElementById('firstname').value.match(/\S/)) {
-        alert("Please Fill All The Required Blanks");
-    }
-    else if (!document.getElementById('lastname').value.match(/\S/)) {
-        alert("1");
-    }
-    else if (!document.getElementById('address').value.match(/\S/)) {
-        alert("P2");
-    }
-    else if (!document.getElementById('phone').value.match(/\S/)) {
-        alert("Please Enter A Valid Phone Number");
-    }
-    else if (!document.getElementById('zipcode').value.match(/\S/)) {
-        alert("4");
-    }
-    else if (!document.getElementById('city').value.match(/\S/)) {
-        alert("5");
-    }
-    else 
-        window.location.replace("Billing.php");
-}*/
