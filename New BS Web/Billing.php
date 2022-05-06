@@ -193,7 +193,7 @@ session_start();
                                    <?php
                                         if(isset($_GET["error"])){
                                             if($_GET["error"] == ("emptyinputorder" || "emptyinputpayment" || "emptyinputshipping")){
-                                                echo "<p class='lead text-danger'><strong>Fill in all fields</p>";
+                                                echo "<p class='lead text-danger'><strong>Fill in all fields</strong></p>";
                                             }
                                         }
                                     ?> 
