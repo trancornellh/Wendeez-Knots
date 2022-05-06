@@ -18,12 +18,24 @@ if(isset($_POST["placeOrderPickup"])){
     require_once 'dbh_p.php';
     require_once 'functions_p.php';
 
+    if(emptyInputOrder($fname, $lname) !== false){
+        header("location: ../Billing.php?error=emptyinputorder");
+        exit();
+    }
+
+    if(emptyInputPayment($cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone) !== false){
+        header("location: ../Billing.php?error=emptyinputpayment");
+        exit();
+    }
+
     placeOrder($conn, $fname, $lname, $orderEmail);
 
     //billingInfo($conn, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
     
     paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);    
-    orderComplete();
+    
+    header("location: ../Invoice.php");
+    exit();
     
     }
 
@@ -49,15 +61,35 @@ if(isset($_POST["placeOrderPickup"])){
     
         require_once 'dbh_p.php';
         require_once 'functions_p.php';
+
+        if(emptyInputShip($fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip) !== false){
+            header("location: ../Address.php?error=emptyinputship");
+            exit();
+        }
+
+        if(emptyInputOrder($fname, $lname) !== false){
+            header("location: ../Address.php?error=emptyinputorder");
+            exit();
+        }
     
+        if(emptyInputPayment($cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone) !== false){
+            header("location: ../Address.php?error=emptyinputpayment");
+            exit();
+        }
+    
+        
+
         placeOrder($conn, $fname, $lname, $orderEmail);
 
         shippingInfo($conn, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
     
         //billingInfo($conn, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
         
-        paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);        orderComplete();
+        paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
         
+        header("location: ../Invoice.php");
+        exit();
+
         }
 
 

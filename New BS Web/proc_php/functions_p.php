@@ -165,15 +165,40 @@ function placeOrder($conn, $fname, $lname, $orderEmail){
     mysqli_stmt_close($stmt);
 }
 
-function addressToBilling(){
-    header("location: ../Billing.php");
-    exit();
+function emptyInputShip($fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip){
+    $result='';
+    if(empty($fnameShip) || empty($lnameShip) || empty($addressShip) || empty($cityShip) || empty($zipcodeShip)){
+        $result=true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
 }
 
-function orderComplete(){
-    header("location: ../Invoice.php");
-    exit();
+function emptyInputPayment($cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone){
+    $result='';
+    if(empty($cardName) || empty($cardNum) || empty($expDate) || empty($cardPin) || empty($addressBilling) || empty($cityBilling) || empty($zipcodeBilling) || empty($phone)){
+        $result=true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
 }
+
+function emptyInputOrder($fname, $lname){
+    $result='';
+    if(empty($fname) || empty($lname)){
+        $result=true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+}
+
+
 
 function sendFeedback($conn, $issue, $fname, $lname, $email, $message){
     $sql = "INSERT INTO contact (issue, fname, lname, email, message) VALUES (?,?,?,?,?)";

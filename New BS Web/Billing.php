@@ -183,10 +183,24 @@ session_start();
                                     </div>
                                 </div>
                             </div>
-
-                            <button name="placeOrderPickup" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
-                                Confirm Payment
-                            </button>
+                            <div class="row">
+                                <div class="col">
+                                    <button name="placeOrderPickup" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
+                                        Confirm Payment
+                                    </button>
+                                </div>
+                                <div class="col">
+                                   <?php
+                                        if(isset($_GET["error"])){
+                                            if($_GET["error"] == ("emptyinputorder" || "emptyinputpayment" || "emptyinputshipping")){
+                                                echo "<p class='lead text-danger text-center'><strong>Fill in all fields</p>";
+                                            }
+                                        }
+                                    ?> 
+                                </div>
+                            </div>
+                            
+                            
                         </form>
                     </div>
                 </div>
