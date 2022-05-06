@@ -111,3 +111,9 @@ function loginUser($conn, $email, $passcode){
         //echo "Logged In";
     }
 }
+
+function retrieveCart(){}
+
+function retrieveAddress(){}
+
+function retrievePayment(){}

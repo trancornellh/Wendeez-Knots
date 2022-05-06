@@ -109,18 +109,25 @@ session_start();
                         <h5 class="mb-0">Delivery Details</h5>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="shippingForm" action="proc_php/shipping_p.php" method="post">
+                            
+                            <?php
+                                echo "<p style ='font-size: xx-large' class='text-center text-large'>Email: " . $_SESSION["userEmail"] . "</p>";
+                            ?>
+
+                            <hr>
+                        
                             <!-- 2 column grid layout with text inputs for the first and last names -->
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="First Name"
                                             aria-label="First Name"   />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
                                                 aria-label="Last Name"  />
                                     </div>
                                 </div>
@@ -129,23 +136,27 @@ session_start();
 
                             <!-- Text input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
+                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address"   />
                             </div>
 
-                            <!-- Email input -->
+                            <!-- Text input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email"  />
-
+                                <input type="text" name="city" id="city" class="form-control form-control-lg" placeholder="City" aria-label="City"   />
                             </div>
 
                             <!-- Number input -->
                             <div class="form-outline mb-4">
-                                <input type="number" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone"  />
+                                <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode"  />
+                            </div>
+
+                            <!-- Number input -->
+                            <div class="form-outline mb-4">
+                                <input type="number" name="phone" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone"  />
                             </div>
 
                             <!-- Message input -->
                             <div class="form-outline">
-                                <textarea class="form-control form-control-lg" placeholder="Additional Information" aria-label="Additional Information"
+                                <textarea class="form-control form-control-lg" name = "addInfo" placeholder="Additional Information" aria-label="Additional Information"
                                           id="form7Example7" rows="4"></textarea>
                             </div>
                         </form>
@@ -178,7 +189,7 @@ session_start();
                             </li>
                         </ul>
 
-                        <button class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Proceed to Checkout</button>
+                        <button type="submit" name="addressCheckout" form="shippingForm" class="checkB btn btn-success btn-outline-success btn-lg btn-block " >Proceed to Checkout</button>
                     </div>
                 </div>
             </div>

@@ -109,18 +109,25 @@ session_start();
                         <h5 class="mb-0">Billing Details</h5>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="billingForm">
+
+                            <?php
+                                echo "<p style ='font-size: xx-large' class='text-center text-large'>Email: " . $_SESSION["userEmail"] . "</p>";
+                            ?>
+
+                            <hr>
+
                             <!--Text Inputs for First and Last Names-->
                             <div class="row mb-4">
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="firstname" class="form-control form-control-lg" placeholder="First Name"
+                                        <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" placeholder="First Name"
                                                 aria-label="First Name" />
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="form-outline">
-                                        <input type="text" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
+                                        <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Last Name"
                                                 aria-label="Last Name" />
                                     </div>
                                 </div>
@@ -128,17 +135,22 @@ session_start();
 
                             <!--Text Input-->
                             <div class="form-outline mb-4">
-                                <input type="text" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address" />
+                                <input type="text" name="address" id="address" class="form-control form-control-lg" placeholder="Address" aria-label="Address" />
                             </div>
 
-                            <!--Email Input-->
+                            <!--Text Input-->
                             <div class="form-outline mb-4">
-                                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" />
+                                <input type="text" name="city" id="address" class="form-control form-control-lg" placeholder="City" aria-label="City" />
                             </div>
 
                             <!--Number Input-->
                             <div class="form-outline mb-4">
-                                <input type="number" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone" />
+                                <input type="number" name="zipcode" id="zipcode" class="form-control form-control-lg" placeholder="Zipcode" aria-label="Zipcode" />
+                            </div>
+
+                            <!--Number Input-->
+                            <div class="form-outline mb-4">
+                                <input type="number" name="phone" id="phone" class="form-control form-control-lg" placeholder="Phone" aria-label="Phone" />
                             </div>
 
                             <hr class="my-4" />
@@ -172,7 +184,7 @@ session_start();
                                 </div>
                             </div>
 
-                            <button class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
+                            <button name="placeOrder" action="proc_php/placeOrder_p.php" method="post" form="billingForm" class="btn btn-success btn-outline-success btn-lg btn-block" type="submit">
                                 Confirm Payment
                             </button>
                         </form>
