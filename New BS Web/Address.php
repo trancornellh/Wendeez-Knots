@@ -252,12 +252,12 @@ session_start();
                                 Shipping
                                 <span>Knot Delivery</span>
                             </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 ">
+                            <div></div>
+                                <span><p id="tax"></p></span>
+                            </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                <div>
-                                    <strong>Total Amount</strong>
-                                    <br>
-                                    <strong>(Includes Tax and Delivery)</strong>
-                                </div>
+                            <div></div>
                                 <span><strong id="total"></strong></span>
                             </li>
                         </ul>

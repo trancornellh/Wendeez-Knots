@@ -224,12 +224,12 @@ session_start();
                                 Shipping
                                 <span>Knot Delivery</span>
                             </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 ">
+                            <div></div>
+                                <span><p id="tax"></p></span>
+                            </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                <div>
-                                    <strong>Total Amount</strong>
-                                    <br>
-                                    <strong>(Includes Tax and Delivery)</strong>
-                                </div>
+                            <div></div>
                                 <span><strong id="total"></strong></span>
                             </li>
                         </ul>
@@ -289,6 +289,6 @@ session_start();
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <!--Bootstrap JavaScript-->
-        <script src="script1.js"></script>
+        <script src="Script1.js"></script>
 </body>
 </html>

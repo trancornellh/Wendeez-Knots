@@ -108,7 +108,7 @@ session_start();
                                     <p class="text-center" style="font-size: 30px;">Thanks! See you again soon!</p>
                                     <div class="row">
                                         <ul class="list-unstyled">
-                                            <li class="text-black"></li>
+                                            <li class="text-black" id="name"></li>
                                             <li class="text-muted mt-1"><span class="text-black">Invoice</span> #69420</li>
                                             <li class="text-black mt-1">May 6 2022</li>
                                         </ul>
