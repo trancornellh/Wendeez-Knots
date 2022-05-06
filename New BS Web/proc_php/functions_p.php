@@ -167,7 +167,6 @@ function placeOrder($conn, $fname, $lname, $orderEmail){
 
 function createOrderNum($conn){
     mysqli_query($conn, "UPDATE orders SET order_num = order_id");
-    mysqli_close($conn);
 }
 
 function emptyInputShip($fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip){
@@ -253,5 +252,4 @@ function invoice($conn, $orderNum){
     $invoiceNum = mysqli_query($conn, "SELECT order_num FROM orders WHERE order_id = '". $orderNum ."';");
     $iFname = mysqli_query($conn, "SELECT fname FROM orders WHERE order_id = '". $orderNum ."';");
     $iLname = mysqli_query($conn, "SELECT lname FROM orders WHERE order_id = '". $orderNum ."';");
-    mysqli_close($conn);
 }
