@@ -15,8 +15,6 @@ if(isset($_POST["placeOrderPickup"])){
     $expDate = $_POST["expdate"];
     $cardPin = $_POST["cardpin"];
     $orderNum;
-    $items[] = $_SESSION["items"];
-    $quantity[] = $_SESSION["quantity"];
     $i;
 
     require_once 'dbh_p.php';
@@ -38,9 +36,11 @@ if(isset($_POST["placeOrderPickup"])){
     $result = mysqli_fetch_array($query);
     $orderNum = $result['MAX(order_id)'];
 
+    
+
     for($i=0;$i<8;$i=$i+1){
-        if($quantity[$i]>0){
-            addItems($conn, $orderNum, $quantity[$i], $item[$i]);
+        if($_SESSION["quantity"][$i]>0){
+            addItems($conn, $orderNum, $_SESSION["quantity"][$i], $_SESSION["items"][$i], $_SESSION["price"][$i]);
         }
     }
     
@@ -73,8 +73,8 @@ if(isset($_POST["placeOrderPickup"])){
         $expDate = $_POST["expdate"];
         $cardPin = $_POST["cardpin"];
         $orderNum;
-        $items[] = $_SESSION["items"];
-        $quantity[] = $_SESSION["quantity"];
+        $items[8] = $_SESSION["items"];
+        $quantity[8] = $_SESSION["quantity"];
         $i;
     
         require_once 'dbh_p.php';
@@ -96,7 +96,7 @@ if(isset($_POST["placeOrderPickup"])){
         }
     
         
-
+        
         placeOrder($conn, $fname, $lname, $orderEmail);
 
         $query = mysqli_query($conn, "SELECT MAX(order_id) FROM orders");
@@ -104,8 +104,8 @@ if(isset($_POST["placeOrderPickup"])){
         $orderNum = $result['MAX(order_id)'];
 
         for($i=0;$i<8;$i=$i+1){
-            if($quantity[$i]>0){
-                addItems($conn, $orderNum, $quantity[$i], $item[$i]);
+            if($_SESSION["quantity"][$i]>0){
+                addItems($conn, $orderNum, $_SESSION["quantity"][$i], $_SESSION["items"][$i], $_SESSION["price"][$i]);
             }
         }
 
@@ -117,10 +117,3 @@ if(isset($_POST["placeOrderPickup"])){
         exit();
 
         }
-
-
-
-    else{
-        header("location: ../Order Delivery.php");
-        exit();
-    }

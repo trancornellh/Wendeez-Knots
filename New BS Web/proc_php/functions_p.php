@@ -248,25 +248,22 @@ function invoice($conn, $orderNum){
     $iLname = mysqli_query($conn, "SELECT lname FROM orders WHERE order_id = '". $orderNum ."';");
 }
 
-function addItems($conn, $orderNum, $quantity, $item){
-    $sql = "INSERT INTO order_items (order_id, quantity, name) VALUES (?,?,?)";
+function addItems($conn, $orderNum, $quantity, $items, $price){
+    //$query = mysqli_query($conn, "SELECT price FROM menu WHERE item_name = '". $items ."';");
+    //$price = mysqli_fetch_assoc($query);
+
+    $sql = "INSERT INTO order_items (order_id, quantity, name, price) VALUES (?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../Order Delivery.php?error=stmtfailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "iis", $orderNum, $quantity, $item);
+    mysqli_stmt_bind_param($stmt, "iisd", $orderNum, $quantity, $items, $price);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    $query = mysqli_query($conn, "SELECT price FROM menu WHERE item_name = '$item'");
-    $result = mysqli_fetch_assoc($query);
+    
 
-    mysqli_query($conn, "UPDATE order_items SET price WHERE name = '$item'");
-
-
-    header("location: ../Order Delivery.php");
-    exit();
-
+    //mysqli_query($conn, "UPDATE order_items SET price = '$result' WHERE name = '$items'");
 }
