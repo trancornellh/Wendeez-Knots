@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+$arr_items = array("Giannis' Order", "The Hearty Sunrise", "Greek Freak Burger", "Cheese Pizza", "Golden Garlic Knots
+", "Greek Freak Fries", "Greek Salad", "Soda");
+$_SESSION["item"] = $arr_items;
+$_SESSION["quantity"] = array(0,0,0,0,0,0,0,0);
+
 ?>
 
 <!DOCTYPE html>
