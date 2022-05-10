@@ -112,16 +112,14 @@ function loginUser($conn, $email, $passcode){
     }
 }
 
-function retrieveCart(){}
-
-function shippingInfo($conn, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo){
-    $sql = "INSERT INTO shipping (fname, lname, address, city, zipcode, addInfo) VALUES (?,?,?,?,?,?)";
+function shippingInfo($conn, $orderNum, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo){
+    $sql = "INSERT INTO shipping (order_num, fname, lname, address, city, zipcode, addInfo) VALUES (?,?,?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../Order Delivery.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "ssssss", $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
+    mysqli_stmt_bind_param($stmt, "issssss", $orderNum, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }
@@ -138,14 +136,14 @@ function shippingInfo($conn, $fnameShip, $lnameShip, $addressShip, $cityShip, $z
     mysqli_stmt_close($stmt);
 }*/
 
-function paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone){
-    $sql = "INSERT INTO payment_info (cardname, card_number, expdate, pin, address, city, zipcode, phone) VALUES (?,?,?,?,?,?,?,?)";
+function paymentInfo($conn, $orderNum, $cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone){
+    $sql = "INSERT INTO payment_info (order_num, cardname, card_number, expdate, pin, address, city, zipcode, phone) VALUES (?,?,?,?,?,?,?,?,?)";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
         header("location: ../Order Delivery.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "ssssssss", $cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
+    mysqli_stmt_bind_param($stmt, "issssssss", $orderNum, $cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }
@@ -163,10 +161,6 @@ function placeOrder($conn, $fname, $lname, $orderEmail){
     mysqli_stmt_bind_param($stmt, "ss", $fname, $lname);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-}
-
-function createOrderNum($conn){
-    mysqli_query($conn, "UPDATE orders SET order_num = order_id");
 }
 
 function emptyInputShip($fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip){
@@ -252,4 +246,27 @@ function invoice($conn, $orderNum){
     $invoiceNum = mysqli_query($conn, "SELECT order_num FROM orders WHERE order_id = '". $orderNum ."';");
     $iFname = mysqli_query($conn, "SELECT fname FROM orders WHERE order_id = '". $orderNum ."';");
     $iLname = mysqli_query($conn, "SELECT lname FROM orders WHERE order_id = '". $orderNum ."';");
+}
+
+function addItems($conn, $orderNum, $quantity, $item){
+    $sql = "INSERT INTO order_items (order_id, quantity, name) VALUES (?,?,?)";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../Order Delivery.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "iis", $orderNum, $quantity, $item);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    $query = mysqli_query($conn, "SELECT price FROM menu WHERE item_name = '$item'");
+    $result = mysqli_fetch_assoc($query);
+
+    mysqli_query($conn, "UPDATE order_items SET price WHERE name = '$item'");
+
+
+    header("location: ../Order Delivery.php");
+    exit();
+
 }

@@ -14,6 +14,10 @@ if(isset($_POST["placeOrderPickup"])){
     $cardNum = $_POST["cardnum"];
     $expDate = $_POST["expdate"];
     $cardPin = $_POST["cardpin"];
+    $orderNum;
+    $items[] = $_SESSION["items"];
+    $quantity[] = $_SESSION["quantity"];
+    $i;
 
     require_once 'dbh_p.php';
     require_once 'functions_p.php';
@@ -30,11 +34,17 @@ if(isset($_POST["placeOrderPickup"])){
 
     placeOrder($conn, $fname, $lname, $orderEmail);
 
-    createOrderNum($conn);
+    $query = mysqli_query($conn, "SELECT MAX(order_id) FROM orders");
+    $result = mysqli_fetch_array($query);
+    $orderNum = $result['MAX(order_id)'];
 
-    //billingInfo($conn, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
+    for($i=0;$i<8;$i=$i+1){
+        if($quantity[$i]>0){
+            addItems($conn, $orderNum, $quantity[$i], $item[$i]);
+        }
+    }
     
-    paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);    
+    paymentInfo($conn, $orderNum, $cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);    
     
 
 
@@ -62,6 +72,10 @@ if(isset($_POST["placeOrderPickup"])){
         $cardNum = $_POST["cardnum"];
         $expDate = $_POST["expdate"];
         $cardPin = $_POST["cardpin"];
+        $orderNum;
+        $items[] = $_SESSION["items"];
+        $quantity[] = $_SESSION["quantity"];
+        $i;
     
         require_once 'dbh_p.php';
         require_once 'functions_p.php';
@@ -85,13 +99,19 @@ if(isset($_POST["placeOrderPickup"])){
 
         placeOrder($conn, $fname, $lname, $orderEmail);
 
-        createOrderNum($conn);
+        $query = mysqli_query($conn, "SELECT MAX(order_id) FROM orders");
+        $result = mysqli_fetch_array($query);
+        $orderNum = $result['MAX(order_id)'];
 
-        shippingInfo($conn, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
-    
-        //billingInfo($conn, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
-        
-        paymentInfo($conn,$cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
+        for($i=0;$i<8;$i=$i+1){
+            if($quantity[$i]>0){
+                addItems($conn, $orderNum, $quantity[$i], $item[$i]);
+            }
+        }
+
+        shippingInfo($conn, $orderNum, $fnameShip, $lnameShip, $addressShip, $cityShip, $zipcodeShip, $addInfo);
+            
+        paymentInfo($conn, $orderNum, $cardName, $cardNum, $expDate, $cardPin, $addressBilling, $cityBilling, $zipcodeBilling, $phone);
         
         header("location: ../Invoice.php");
         exit();
