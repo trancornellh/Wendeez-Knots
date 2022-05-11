@@ -1,5 +1,12 @@
 <?php
 session_start();
+
+$arr_items = array("Giannis' Order", "Greek Freak Burger", "The Hearty Sunrise", "Cheese Pizza", "Golden Garlic Knots
+", "Greek Freak Fries", "Greek Salad", "Soda");
+$_SESSION["items"] = $arr_items;
+$_SESSION["quantity"] = array(0,0,0,0,0,0,0,0);
+$_SESSION["price"] = array(19.99, 11.99, 14.99, 9.99, 7.99, 4.99, 5.99, 1.49);
+
 ?>
 
 <!DOCTYPE html>

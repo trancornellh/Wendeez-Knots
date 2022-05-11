@@ -1,12 +1,5 @@
 <?php
 session_start();
-
-$arr_items = array("Giannis' Order", "Greek Freak Burger", "The Hearty Sunrise", "Cheese Pizza", "Golden Garlic Knots
-", "Greek Freak Fries", "Greek Salad", "Soda");
-$_SESSION["items"] = $arr_items;
-$_SESSION["quantity"] = array(1,2,1,2,1,2,1,2);
-$_SESSION["price"] = array(19.99, 11.99, 14.99, 9.99, 7.99, 4.99, 5.99, 1.49);
-
 ?>
 
 <!DOCTYPE html>
@@ -116,92 +109,132 @@ $_SESSION["price"] = array(19.99, 11.99, 14.99, 9.99, 7.99, 4.99, 5.99, 1.49);
         <div class="container-fluid">
             <div class="row row-cols-auto align-self-center justify-content-md-center mx-0 my-3">
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> Giannis' Order </h3>
                         <img src="Images/Menu Giannis Order.png" alt="Gorder" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name="qty0">
+                        <input name="item0" type="number" class="qty" min="1" value="1" style="width:120px;" name="qty0">
                         <p class="price"> $19.99 </p>
                         <button name ="btn0" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn0'])){
+                        $_SESSION["quantity"][0] = $_SESSION["quantity"][0] + $_POST["item0"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> Greek Freak Burger </h3>
                         <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name="qty1">
+                        <input name="item1" type="number" class="qty" min="1" value="1" style="width:120px;" name="qty1">
                         <p class="price"> $10.99 </p>
                         <button name ="btn1" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn1'])){
+                        $_SESSION["quantity"][1] = $_SESSION["quantity"][1] + $_POST["item1"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> The Hearty Sunrise </h3>
                         <img src="Images/Menu Hearty Sunrise.png" alt="HeartyBurger" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty2">
+                        <input name="item2" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty2">
                         <p class="price"> $14.99 </p>
                         <button name ="btn2" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn2'])){
+                        $_SESSION["quantity"][2] = $_SESSION["quantity"][2] + $_POST["item2"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> Cheese Pizza </h3>
                         <img src="Images/Menu Cheese Pizza.jpg" alt="Pizza" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty3">
+                        <input name="item3" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty3">
                         <p class="price"> $9.99 </p>
                         <button name ="btn3" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn3'])){
+                        $_SESSION["quantity"][3] = $_SESSION["quantity"][3] + $_POST["item3"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> Golden Garlic Knots </h3>
                         <img src="Images/Menu Garlic Knots.png" alt="Knots" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty4">
+                        <input name="item4" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty4">
                         <p class="price"> $7.99 </p>
                         <button name ="btn4" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn4'])){
+                        $_SESSION["quantity"][4] = $_SESSION["quantity"][4] + $_POST["item4"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname"> Greek Freak Fries </h3>
                         <img src="Images/Menu Fries.png" alt="Fries" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty5">
+                        <input name="item5" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty5">
                         <p class="price"> $4.99 </p>
                         <button name ="btn5" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn5'])){
+                        $_SESSION["quantity"][5] = $_SESSION["quantity"][5] + $_POST["item5"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname">Greek Salad</h3>
                         <img src="Images/Menu Salad.jpg" alt="Salad" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty6">
+                        <input name="item6" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty6">
                         <p class="price"> $5.99 </p>
                         <button name ="btn6" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn6'])){
+                        $_SESSION["quantity"][6] = $_SESSION["quantity"][6] + $_POST["item6"];
+                    }
+                    ?>
                 </div>
                 <div class="col product mx-2 mb-3">
-                    <form>
+                    <form method="post">
                         <h3 class="productname">Soda</h3>
                         <img src="Images/Menu Soda.png" alt="Soda" class="img-fluid" style="width:220px;height:220px;">
                         <br />
                         <br />
-                        <input type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty7">
+                        <input name="item7" type="number" class="qty" min="1" value="1" style="width:120px;" name ="qty7">
                         <p class="price"> $1.99 </p>
                         <button name ="btn7" class="addtocart btn btn-success btn-outline-success btn-lg btn-block" style="position: relative; padding: 10px 100px; background-color: #00471b; color:white;">Add</button>
                     </form>
+                    <?php
+                    if(isset($_POST['btn7'])){
+                        $_SESSION["quantity"][7] = $_SESSION["quantity"][7] + $_POST["item7"];
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -238,7 +271,14 @@ $_SESSION["price"] = array(19.99, 11.99, 14.99, 9.99, 7.99, 4.99, 5.99, 1.49);
                         <label class="form-check-label"  for="Delivery">Delivery</label>
                     </div>
                     <div class="col-xl-1 col-lg-1 col-md-3 col-sm-3 col-3">
-                        <button class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
+                        <form method = "post">
+                            <button name="clr" class="emptycart btn btn-success btn-outline-success btn-lg btn-block" style="background-color:white; color: #00471b;">Empty Cart</button>  
+                        </form>
+                        <?php
+                        if(isset($_POST['clr'])){
+                            $_SESSION["quantity"] = array(0,0,0,0,0,0,0,0);
+                        }
+                    ?>
                     </div>
                     <div class="col-xl-1 col-lg-1 col-md-4 col-sm-5 col-5">
                         <button class="proceed btn btn-success btn-outline-success btn-lg btn-block" style="background-color: #00471b; color:white;">Proceed to Checkout</button>

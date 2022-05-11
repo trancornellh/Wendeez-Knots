@@ -20,6 +20,8 @@ if(isset($_POST["placeOrderPickup"])){
     require_once 'dbh_p.php';
     require_once 'functions_p.php';
 
+    //echo "{$_SESSION["quantity"][0]}{$_SESSION["quantity"][1]}{$_SESSION["quantity"][2]}{$_SESSION["quantity"][3]}{$_SESSION["quantity"][4]}{$_SESSION["quantity"][5]}{$_SESSION["quantity"][6]}{$_SESSION["quantity"][7]}";
+
     if(emptyInputOrder($fname, $lname) !== false){
         header("location: ../Billing.php?error=emptyinputorder");
         exit();
