@@ -115,24 +115,6 @@ session_start();
             </div>
 
             <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
-                <img src="Images/Menu Hearty Sunrise.png" alt="Fries" class="img-fluid" />
-            </div>
-            <div class="col" style="border:1px solid #ddd">
-                <div class="d-flex justify-content-between p-2">
-                    <h1>The Hearty Sunrise</h1>
-                    <h1>$14.99</h1>
-                </div>
-                <div style="clear: both;"></div>
-                <p class="p-2">
-                    LIMITED TIME! The Hearty Sunrise consists of 1/2 lb beef patty, sunny
-                    side up egg, bacon, lettuce, american cheese and pickles. It has the
-                    chef special white sauce. The chef special sauce is made fresh daily.
-                </p>
-            </div>
-        </div>
-
-        <div class="d-lg-flex mx-4 mb-4">
-            <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
                 <img src="Images/Menu Burger.png" alt="Burger" class="img-fluid" />
             </div>
 
@@ -148,6 +130,24 @@ session_start();
                     We use our special formula of 85% chuck and 15% sirloin for our
                     beef patty. This allows for the beefy flavor to burst out with how juicy it is.
                     Our burgers are grass fed locally for the highest quality beef.
+                </p>
+            </div>
+        </div>
+
+        <div class="d-lg-flex mx-4 mb-4">
+            <div class="col-xl-2 col-lg-2 col-md-2" style="border:1px solid #ddd">
+                <img src="Images/Menu Hearty Sunrise.png" alt="Fries" class="img-fluid" />
+            </div>
+            <div class="col" style="border:1px solid #ddd">
+                <div class="d-flex justify-content-between p-2">
+                    <h1>The Hearty Sunrise</h1>
+                    <h1>$14.99</h1>
+                </div>
+                <div style="clear: both;"></div>
+                <p class="p-2">
+                    LIMITED TIME! The Hearty Sunrise consists of 1/2 lb beef patty, sunny
+                    side up egg, bacon, lettuce, american cheese and pickles. It has the
+                    chef special white sauce. The chef special sauce is made fresh daily.
                 </p>
             </div>
             <div class="col-xl-2 col-lg-2 col-md-2 g-0" style="border:1px solid #ddd">
